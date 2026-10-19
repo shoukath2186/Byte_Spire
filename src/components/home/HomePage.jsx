@@ -13,7 +13,7 @@ import BlogSection from './BlogSection';
 
 function HomePage() {
   return (
-    <div className="overflow-hidden">
+    <div className="overflow-x-clip">
       {/* 1. Hero Banner with 3-image column panels & floating stats widget */}
       <HeroBanner />
 

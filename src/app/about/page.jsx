@@ -61,12 +61,12 @@ function AboutPage() {
       <main className="flex-grow">
         {/* SECTION 1 — Hero */}
         <section className="relative bg-black py-24 md:py-32 text-center px-6 overflow-hidden">
-          <div 
+          <div
             className="absolute inset-0 z-0 bg-cover bg-center opacity-50"
             style={{ backgroundImage: 'url("/about_bg.png")' }}
           />
-          <div className="absolute inset-0 z-10 bg-gradient-to-b from-black/80 via-black/50 to-white" />
-          
+          <div className="absolute inset-0 z-10 bg-gradient-to-b from-black/80 via-black/50 to-white/50" />
+
           <div className="relative z-20 max-w-5xl mx-auto flex flex-col items-center mt-12">
             <span className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full text-xs font-light uppercase tracking-widest text-pink-200 bg-[#8e2157]/40 border border-[#8e2157]/60 mb-6 backdrop-blur-sm">
               Our Story
@@ -182,7 +182,7 @@ function AboutPage() {
                 Why Businesses Choose ByteSpire
               </h2>
             </div>
-            
+
             <div className="space-y-6">
               {[
                 { title: 'Result-Oriented', desc: "We don't just write code or run campaigns; we deliver measurable outcomes that grow your revenue and ROI." },
@@ -270,22 +270,22 @@ function AboutPage() {
 
         {/* SECTION 9 — Closing CTA */}
         <section className="relative w-full py-16 md:py-20 bg-black overflow-hidden border-t border-gray-100">
-          <div 
+          <div
             className="absolute inset-0 z-0 bg-cover bg-center opacity-60"
             style={{ backgroundImage: 'url("/cta_bg.png")' }}
           />
           <div className="absolute inset-0 z-10 bg-gradient-to-r from-black via-black/80 to-transparent" />
 
           <div className="relative z-20 max-w-7xl mx-auto px-6 h-full flex flex-col md:flex-row items-center justify-between gap-12">
-            
+
             <div className="max-w-2xl text-left">
               <h2 className="text-2xl md:text-4xl font-light text-white leading-tight mb-6 drop-shadow-md">
-                Ready to Bring AI <br className="hidden md:block"/> Into Your Business?
+                Ready to Bring AI <br className="hidden md:block" /> Into Your Business?
               </h2>
               <p className="text-white/80 text-sm md:text-base font-light leading-relaxed mb-8 max-w-xl">
                 Whether you need a scalable web application, an AI-powered automation tool, or a complete digital and brand overhaul — our team is ready to build it with you.
               </p>
-              
+
               <div className="flex flex-wrap gap-4 md:gap-6">
                 {['Free Consultation', 'Custom AI & Digital Solutions', 'Rapid Response Time'].map((signal, idx) => (
                   <div key={idx} className="flex items-center gap-2 text-white/70 text-sm font-light">

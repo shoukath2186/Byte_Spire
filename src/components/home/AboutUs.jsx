@@ -9,7 +9,7 @@ const AboutUs = () => {
         <span className="inline-flex mt-[100px] md:mt-0 items-center gap-2 px-3 py-1 rounded-full text-xs font-light uppercase tracking-widest text-[#8e2157] bg-[#8e2157]/10 mb-4">
           About Us
         </span>
-        <h2 className="text-3xl md:text-5xl font-light text-gray-900 leading-tight mb-6">
+        <h2 className="text-2xl sm:text-3xl md:text-4xl font-light text-gray-900 leading-tight mb-6">
           Empowering Your Business with <br className="hidden md:block" /> Smart Digital Solutions
         </h2>
         <p className="text-gray-600 text-base md:text-lg font-light leading-relaxed mb-10 max-w-3xl">

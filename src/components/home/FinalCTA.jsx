@@ -26,7 +26,7 @@ function FinalCTA() {
         
         {/* Left Side: Text */}
         <div className="max-w-2xl text-left">
-          <h2 className="text-3xl md:text-5xl font-light text-white leading-tight mb-6 drop-shadow-md">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-light text-white leading-tight mb-6 drop-shadow-md">
             Ready to Transform Your <br className="hidden md:block"/> Digital Presence?
           </h2>
           <p className="text-white/80 text-sm md:text-base font-light leading-relaxed mb-8 max-w-xl">

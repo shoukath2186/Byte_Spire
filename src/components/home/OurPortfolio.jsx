@@ -66,7 +66,7 @@ function OurPortfolio() {
               <Eye className="h-4 w-4 mr-2" />
               Our Portfolio
             </div>
-            <h2 className="text-4xl md:text-5xl font-light mb-6">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-light mb-6">
               Success Stories & <span className="text-[#8e2157]">Case Studies</span>
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">

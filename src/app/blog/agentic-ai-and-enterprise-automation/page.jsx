@@ -103,7 +103,7 @@ export default function BlogPost() {
               <div>
                 <p className="text-white text-sm font-medium">ByteSpire Insights Team</p>
                 <p className="text-white/50 text-xs">Research & Development</p>
-              </div>
+              </div> 
             </div>
           </div>
         </section>

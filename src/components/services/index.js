@@ -1,0 +1,10 @@
+export { default as ServicesHero } from "./ServicesHero";
+export { default as ServicesGrid, defaultServices } from "./ServicesGrid";
+export { default as ServiceBanner } from "./ServiceBanner";
+export { default as ServiceOverview } from "./ServiceOverview";
+export { default as ServiceExpertise } from "./ServiceExpertise";
+export { default as ServiceSolutions } from "./ServiceSolutions";
+export { default as ServiceProcess } from "./ServiceProcess";
+export { default as ServiceFAQ } from "./ServiceFAQ";
+export { default as ServiceCTA } from "./ServiceCTA";
+export { default as ServiceDetailTemplate } from "./ServiceDetailTemplate";

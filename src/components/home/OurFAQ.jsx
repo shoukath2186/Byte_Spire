@@ -46,7 +46,7 @@ function OurFAQ() {
 
         {/* Section Header */}
         <div className="mb-14 text-center">
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-light text-gray-900 leading-tight mb-4">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-light text-gray-900 leading-tight mb-4">
             Frequently Asked Questions
           </h2>
         </div>

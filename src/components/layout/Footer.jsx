@@ -2,7 +2,7 @@
 
 import React from "react";
 import Link from "next/link";
-import Image from "next/image";
+import { LogoIcon } from "./Logo";
 import {
   Mail,
   Phone,
@@ -54,9 +54,9 @@ function Footer() {
 
           {/* Company Info */}
           <div className="space-y-6">
-            <Link href="/" className="flex items-center group cursor-pointer">
+            <Link href="/" className="flex items-center group cursor-pointer" aria-label="ByteSpire Home">
               <div className="flex items-center justify-center transform group-hover:scale-110 transition-all duration-300">
-                <Image src="/log-no-bg.png" alt="ByteSpire Logo" width={48} height={48} className="w-12 h-12 object-contain" />
+                <LogoIcon className="w-10 h-10 lg:w-12 lg:h-12" />
               </div>
               <span className="ml-3 text-white font-light text-2xl tracking-tight">
                 ByteSpire

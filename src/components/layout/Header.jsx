@@ -1,9 +1,9 @@
 "use client";
-import Image from "next/image"; // Needed because you use useState
 
 import React, { useEffect, useState } from "react";
 import Link from "next/link";
 import { Menu, X, ChevronDown } from "lucide-react";
+import { LogoIcon } from "./Logo";
 
 function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -11,8 +11,7 @@ function Header() {
 
   const navItems = [
     { name: "Home", path: "/" },
-    { name: "Services", path: "/services" },
-    // { name: "Projects", path: "/projects" },
+    { name: "Services", path: "/services" }, 
     { name: "Career", path: "/career" },
     { name: "About", path: "/about" },
     { name: "Contact", path: "/contact" },
@@ -42,9 +41,9 @@ function Header() {
       <div className="max-w-7xl mx-auto px-4">
         <div className="flex justify-between items-center h-16 lg:h-18">
           {/* Logo */}
-          <Link href="/" className="flex items-center group cursor-pointer">
+          <Link href="/" className="flex items-center group cursor-pointer" aria-label="ByteSpire Home">
             <div className="flex items-center justify-center transform group-hover:scale-110 transition-all duration-300">
-              <Image src="/log-no-bg.png" alt="ByteSpire Logo" width={40} height={40} className="w-8 h-8 lg:w-10 lg:h-10 object-contain" />
+              <LogoIcon className="w-8 h-8 lg:w-10 lg:h-10" />
             </div>
             <span
               className={`ml-2 lg:ml-3 font-medium text-xl lg:text-2xl tracking-tight transition-colors duration-300 ${isScrolled ? "text-gray-900" : "text-white"

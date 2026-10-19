@@ -47,7 +47,7 @@ function WyChoose() {
 
         {/* Section Header */}
         <div className="mb-14 text-center flex flex-col items-center">
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-light text-white leading-tight mb-4">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-light text-white leading-tight mb-4">
             Why Choose Bytespire?
           </h2>
           <p className="text-white/60 text-sm md:text-base font-light leading-relaxed max-w-2xl">

@@ -44,7 +44,12 @@ export const metadata = {
     images: ["https://bytespire.in/logo.png"],
   },
   icons: {
-    icon: "/logo.svg",
+    icon: [
+      { url: "/icon.svg", type: "image/svg+xml" },
+      { url: "/logo.svg", type: "image/svg+xml" },
+    ],
+    shortcut: "/icon.svg",
+    apple: "/apple-touch-icon.png",
   },
 };
 

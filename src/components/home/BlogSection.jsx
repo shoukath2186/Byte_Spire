@@ -22,7 +22,7 @@ function BlogSection() {
         {/* Header */}
         <div className="flex items-end justify-between mb-14">
           <div className="max-w-xl">
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-light text-gray-900 leading-tight mb-4">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-light text-gray-900 leading-tight mb-4">
               Insights & Articles
             </h2>
           </div>
