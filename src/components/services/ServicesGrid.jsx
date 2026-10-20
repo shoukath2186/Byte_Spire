@@ -66,16 +66,36 @@ export const defaultServices = [
 
 export default function ServicesGrid({ services = defaultServices }) {
   return (
-    <section className="bg-white py-16 md:py-24 border-t border-gray-100">
+    <section className="bg-white py-14 md:py-24 border-t border-gray-100">
       <div className="max-w-7xl mx-auto px-6">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-10 lg:gap-14">
+        {/* Section Header */}
+        <div className="mb-12 md:mb-16">
+          <div className="flex items-center gap-2 mb-4">
+            <div className="relative w-3.5 h-1.5">
+              <span className="block w-full h-full rounded-[2px] bg-[#8e2157]" />
+            </div>
+            <span className="text-gray-900/80 text-[11px] sm:text-[12px] font-semibold tracking-widest uppercase">
+              Our Services
+            </span>
+          </div>
+
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-light text-gray-900 leading-tight mb-4 max-w-2xl">
+            Comprehensive Digital Solutions
+          </h2>
+          <p className="text-gray-500 text-sm md:text-base font-light leading-relaxed max-w-2xl">
+            From building complex software to crafting beautiful brands and driving traffic, we provide end-to-end services to help your business thrive.
+          </p>
+        </div>
+
+        {/* Services Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-10">
           {services.map((service, index) => (
             <div
               key={index}
-              className="flex flex-col bg-white rounded-3xl overflow-hidden shadow-sm border border-gray-100 hover:shadow-[0_12px_40px_rgba(142,33,87,0.08)] hover:border-[#8e2157]/20 transition-all duration-300 group"
+              className="flex flex-col bg-white rounded-2xl md:rounded-3xl overflow-hidden shadow-sm border border-gray-100 hover:shadow-[0_12px_40px_rgba(142,33,87,0.08)] hover:border-[#8e2157]/20 transition-all duration-300 group"
             >
               {/* Image */}
-              <div className="h-64 w-full overflow-hidden relative">
+              <div className="h-56 md:h-64 w-full overflow-hidden relative">
                 <Image
                   src={service.image}
                   alt={service.title}
@@ -85,21 +105,21 @@ export default function ServicesGrid({ services = defaultServices }) {
               </div>
 
               {/* Content */}
-              <div className="p-8 md:p-10 flex flex-col flex-grow">
-                <h3 className="text-2xl font-light text-gray-900 leading-snug mb-4 group-hover:text-[#8e2157] transition-colors">
+              <div className="p-7 md:p-9 flex flex-col flex-grow">
+                <h3 className="text-xl md:text-2xl font-light text-gray-900 leading-snug mb-4 group-hover:text-[#8e2157] transition-colors">
                   {service.title}
                 </h3>
 
-                <p className="text-gray-500 font-light leading-relaxed mb-8">
+                <p className="text-gray-500 font-light text-sm leading-relaxed mb-7">
                   {service.description}
                 </p>
 
                 {/* Features List */}
-                <ul className="space-y-3 mb-10">
+                <ul className="space-y-2.5 mb-8">
                   {service.features.map((feature, idx) => (
                     <li
                       key={idx}
-                      className="flex items-center gap-3 text-sm font-light text-gray-700"
+                      className="flex items-center gap-2.5 text-sm font-light text-gray-700"
                     >
                       <Check className="h-4 w-4 text-[#8e2157] flex-shrink-0" />
                       {feature}
@@ -107,7 +127,7 @@ export default function ServicesGrid({ services = defaultServices }) {
                   ))}
                 </ul>
 
-                {/* Bottom Link Area */}
+                {/* Bottom Link */}
                 <Link href={service.href} className="mt-auto inline-block">
                   <div className="inline-flex items-center gap-2 text-sm font-medium text-[#8e2157] hover:text-[#6b1842] transition-colors">
                     <span>{service.linkText}</span>

@@ -5,12 +5,12 @@ import Link from "next/link";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import ServiceBanner from "./ServiceBanner";
-import ServiceOverview from "./ServiceOverview";
 import ServiceExpertise from "./ServiceExpertise";
 import ServiceSolutions from "./ServiceSolutions";
 import ServiceProcess from "./ServiceProcess";
 import ServiceFAQ from "./ServiceFAQ";
-import ServiceCTA from "./ServiceCTA";
+import FinalCTA from "@/components/home/FinalCTA";
+import OutClientsSay from "@/components/home/OutClientsSay";
 
 export default function ServiceDetailTemplate({ service }) {
   if (!service) {
@@ -39,33 +39,34 @@ export default function ServiceDetailTemplate({ service }) {
   }
 
   return (
-    <div className="min-h-screen bg-gray-50 flex flex-col font-sans">
+    <div className="min-h-screen bg-white flex flex-col font-sans">
       <Header />
 
       <main className="flex-grow">
-        {/* Banner Section */}
+        {/* Banner Section — with description */}
         <ServiceBanner
           title={service.title}
+          description={service.description}
           bannerImage={service.bannerImage}
         />
 
-        {/* Overview Section */}
-        <ServiceOverview description={service.description} />
-
-        {/* Sub-Services / Expertise Section */}
+        {/* Sub-Services / Expertise Section — highlighted cards */}
         <ServiceExpertise subServices={service.subServices} />
 
         {/* Solutions Section */}
         <ServiceSolutions solutions={service.solutions} />
 
-        {/* Process Section */}
+        {/* Process Section — sticky cards like homepage */}
         <ServiceProcess process={service.process} />
 
         {/* FAQ Accordion Section */}
         <ServiceFAQ faq={service.faq} />
 
-        {/* Dynamic CTA */}
-        <ServiceCTA cta={service.cta} />
+        {/* Client Testimonials — same as homepage */}
+        <OutClientsSay />
+
+        {/* CTA — same as homepage */}
+        <FinalCTA />
       </main>
 
       <Footer />

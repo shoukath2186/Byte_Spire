@@ -16,16 +16,29 @@ export default function ServiceFAQ({
   if (!faq || faq.length === 0) return null;
 
   return (
-    <section className="py-12 md:py-20 px-6 bg-white border-t border-gray-100">
+    <section className="py-14 md:py-24 px-6 bg-gray-50 border-t border-gray-100">
       <div className="max-w-7xl mx-auto w-full">
         <div className="max-w-4xl mx-auto">
-          <div className="mb-12 text-center">
-            <h2 className="text-3xl md:text-4xl font-light text-gray-900 mb-4">
+          {/* Section Header */}
+          <div className="mb-10 md:mb-14 text-center">
+            <div className="flex items-center justify-center gap-2 mb-4">
+              <div className="relative w-3.5 h-1.5">
+                <span className="block w-full h-full rounded-[2px] bg-[#8e2157]" />
+              </div>
+              <span className="text-gray-900/80 text-[11px] sm:text-[12px] font-semibold tracking-widest uppercase">
+                FAQ
+              </span>
+            </div>
+
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-light text-gray-900 mb-4">
               {title}
             </h2>
-            <div className="w-20 h-1 bg-[#8e2157] mx-auto rounded-full"></div>
+            <p className="text-gray-500 text-sm md:text-base font-light leading-relaxed max-w-xl mx-auto">
+              Get answers to common questions about our service, process, and deliverables.
+            </p>
           </div>
 
+          {/* FAQ Accordion */}
           <div className="space-y-4">
             {faq.map((item, idx) => {
               const isOpen = openFaqIndex === idx;
@@ -41,7 +54,7 @@ export default function ServiceFAQ({
                 >
                   <div className="flex items-center justify-between p-6">
                     <h3
-                      className={`text-lg font-medium pr-8 transition-colors duration-300 ${
+                      className={`text-base md:text-lg font-medium pr-8 transition-colors duration-300 ${
                         isOpen ? "text-[#8e2157]" : "text-gray-900"
                       }`}
                     >
@@ -55,7 +68,7 @@ export default function ServiceFAQ({
                       {isOpen ? (
                         <Minus className="w-5 h-5 text-[#8e2157]" />
                       ) : (
-                        <Plus className="w-5 h-5 text-[#8e2157] opacity-50 group-hover:opacity-100" />
+                        <Plus className="w-5 h-5 text-[#8e2157] opacity-50" />
                       )}
                     </div>
                   </div>
