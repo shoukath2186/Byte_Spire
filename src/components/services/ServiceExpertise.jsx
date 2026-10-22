@@ -6,11 +6,18 @@ import { Check, Plus } from "lucide-react";
 
 // Curated high-quality visuals mapped to sub-service categories
 const defaultCategoryImages = {
+  "mobile-development": "/service_mobile.jpg",
+  "custom-software": "/service_custom_software.jpg",
+  "ecommerce-store": "/service_ecommerce.jpg",
+  "business-websites": "/banner-center.png",
+  "ai-solutions": "/agentic_ai_cover.png",
   "web-development": "/service_tech.png",
-  "mobile-development": "/tech_image.png",
   "software-testing": "/service_tech.png",
   "custom-application": "/banner-center.png",
   "seo-optimization": "/service_marketing.png",
+  "branding": "/service_branding.png",
+  "web-design-development": "/service_tech.png",
+  "360-marketing": "/services_bg.png",
   "pay-per-click": "/services_bg.png",
   "content-marketing": "/banner-right.png",
   "email-marketing": "/service_marketing.png",

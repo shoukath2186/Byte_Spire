@@ -1,35 +1,24 @@
 import { 
-  technologyServices, 
-  digitalMarketingServices, 
-  experienceDesignServices, 
-  brandingServices 
+  servicesMeta,
+  subServicesMeta,
 } from '@/data/services/mainServices';
-
-const serviceDataMap = {
-  technology: technologyServices,
-  'digital-marketing': digitalMarketingServices,
-  'experience-design': experienceDesignServices,
-  branding: brandingServices
-};
 
 export async function generateMetadata({ params }) {
   const resolvedParams = await params;
   const slug = resolvedParams.slug;
-  const data = serviceDataMap[slug];
+  const meta = servicesMeta[slug] || subServicesMeta[slug];
 
-  if (!data) {
+  if (!meta) {
     return {
-      title: 'Service Not Found | ByteSpire Innovations'
+      title: 'Service Not Found | ByteSpire'
     };
   }
 
   return {
-    title: `${data.title} | ByteSpire Innovations`,
-    description: data.description,
-    openGraph: {
-      title: `${data.title} | ByteSpire Innovations`,
-      description: data.description,
-    }
+    ...meta,
+    alternates: {
+      canonical: meta.alternates?.canonical || `https://bytespire.in/services/${slug}`,
+    },
   };
 }
 

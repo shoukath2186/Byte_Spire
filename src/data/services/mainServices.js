@@ -1,42 +1,105 @@
-import { 
+import {
   RefreshCw, Cloud, Link2, ShieldCheck, Layout, Smartphone, Bug, Code,
   Search, Target, BarChart, Mail, TrendingUp, Users, Globe,
   PenTool, Monitor, MousePointer, LayoutDashboard, Layers, Eye,
-  Briefcase, Flag, Sparkles, Megaphone, Star, Award, Compass, MessageCircle
+  Briefcase, Flag, Sparkles, Megaphone, Star, Award, Compass, MessageCircle,
+  ShoppingBag, Bot
 } from 'lucide-react';
 
 export const technologyServices = {
-  title: 'Technology & Application Development',
-  description: 'We build robust, scalable, and high-performance web and mobile applications tailored to your unique business needs. From initial architecture to deployment, our engineering team ensures top-tier quality.',
+  title: 'Web & Mobile App Development Services',
+  description: 'Looking for web or app development in Kerala? Bytespire builds responsive websites, mobile apps and custom software tailored to your business needs.',
   bannerImage: '/service_tech.png',
   subServices: [
     {
-      id: 'web-development',
-      title: 'Web Site Development',
-      description: 'Creating responsive, fast, and secure websites that drive engagement and business growth. We use modern frameworks to build future-proof web experiences that scale with your business.',
-      icon: Layout,
-      features: ['React & Next.js Development', 'Responsive & Mobile-First Design', 'SEO & Performance Optimized', 'Custom CMS Integration'],
-    },
-    {
       id: 'mobile-development',
       title: 'Mobile App Development',
-      description: 'Building native and cross-platform mobile applications that offer seamless user experiences on iOS and Android devices, keeping your audience engaged on the go.',
+      description: 'Engineer native and cross-platform mobile apps for iOS and Android that deliver intuitive experiences, blazing speeds, and high engagement on mobile devices.',
       icon: Smartphone,
-      features: ['iOS & Android Native Apps', 'Cross-Platform (React Native)', 'App Store Deployment', 'Mobile UI/UX Excellence'],
+      image: '/service_mobile.jpg',
+      features: ['iOS & Android Native Apps', 'Cross-Platform (React Native & Flutter)', 'App Store & Play Store Deployment', 'Intuitive Mobile UI/UX & Offline Sync'],
+      meta: {
+        title: 'Mobile App Development Company in Kerala | iOS & Android | Bytespire',
+        description: 'Top mobile app development agency in Kerala. We build high-performance iOS and Android mobile apps for startups and enterprises across Kochi, Calicut & Trivandrum.',
+        keywords: ['mobile app development Kerala', 'iOS app developers Kochi', 'Android app company Kerala', 'React Native apps India', 'mobile app development Calicut'],
+        openGraph: {
+          title: 'Mobile App Development Company in Kerala | Bytespire',
+          description: 'High-performance iOS & Android mobile applications engineered for startups and enterprises across Kerala and global markets.',
+          images: [{ url: '/logo.svg' }],
+        },
+      },
     },
     {
-      id: 'software-testing',
-      title: 'Software Testing',
-      description: 'Ensuring your applications are flawless, secure, and perform optimally under all conditions through rigorous automated and manual QA testing protocols.',
-      icon: Bug,
-      features: ['Automated & Manual QA', 'Load & Performance Testing', 'Security Vulnerability Audits', 'Continuous Integration (CI/CD)'],
-    },
-    {
-      id: 'custom-application',
-      title: 'Custom Application',
-      description: 'Developing tailored software solutions designed specifically to address your unique business challenges, streamline your operations, and boost productivity.',
+      id: 'custom-software',
+      title: 'Custom Software for Business',
+      description: 'Develop tailored software solutions designed specifically to address your unique operational bottlenecks, automate repetitive workflows, and accelerate business productivity.',
       icon: Code,
-      features: ['Enterprise Software Solutions', 'Business Workflow Automation', 'Scalable Microservices Architecture', 'Custom API Integrations'],
+      image: '/service_custom_software.jpg',
+      features: ['Enterprise Business Portals', 'Automated Workflow & ERP Systems', 'Scalable Cloud Microservices', 'Secure API & Payment Integrations'],
+      meta: {
+        title: 'Custom Software Development Company in Kerala | Bytespire',
+        description: 'Custom enterprise software and business workflow automation in Kerala. Scalable cloud-native solutions designed to streamline business operations.',
+        keywords: ['custom software development Kerala', 'enterprise software company Kochi', 'ERP development Kerala', 'workflow automation software India', 'software company Calicut'],
+        openGraph: {
+          title: 'Custom Software Development Company in Kerala | Bytespire',
+          description: 'End-to-end custom application development to solve business challenges for enterprises across Kerala and beyond.',
+          images: [{ url: '/logo.svg' }],
+        },
+      },
+    },
+    {
+      id: 'ecommerce-store',
+      title: 'E-Commerce Store Development',
+      description: 'Launch high-converting, secure online stores built for scale. Complete with multi-currency payment gateways, inventory management, fast checkout, and mobile-first storefronts.',
+      icon: ShoppingBag,
+      image: '/service_ecommerce.jpg',
+      features: ['Custom Storefronts (Next.js & Shopify)', 'Seamless Payment Gateways (Razorpay, Stripe)', 'Inventory & Order Management', 'Conversion Rate & Cart Optimization'],
+      meta: {
+        title: 'E-Commerce Website Development in Kerala | Online Stores | Bytespire',
+        description: 'Build fast, high-converting e-commerce online stores in Kerala. Custom shopping platforms with seamless payment gateways, cart optimization, and mobile-ready designs.',
+        keywords: ['ecommerce website development Kerala', 'online store developers Kochi', 'Shopify agency Kerala', 'ecommerce solutions Calicut', 'custom shopping cart India'],
+        openGraph: {
+          title: 'E-Commerce Website Development in Kerala | Bytespire',
+          description: 'Build fast, high-converting e-commerce online stores with secure payment gateways and seamless checkout experiences.',
+          images: [{ url: '/logo.svg' }],
+        },
+      },
+    },
+    {
+      id: 'business-websites',
+      title: 'Business Websites',
+      description: 'Create modern, lightning-fast, and responsive business websites that build instant credibility, showcase your authority, and convert visitors into qualified leads.',
+      icon: Layout,
+      image: '/banner-center.png',
+      features: ['Modern Responsive & Mobile-First Design', 'SEO & Core Web Vitals Optimized', 'Custom CMS & Blog Integration', 'Lead Capture & Contact Funnels'],
+      meta: {
+        title: 'Business Website Design & Development in Kerala | Bytespire',
+        description: 'Professional corporate and business website development in Kerala. Fast, responsive, and SEO-optimized business websites designed to generate high-intent customer leads.',
+        keywords: ['business website development Kerala', 'corporate website design Kochi', 'website development Calicut', 'professional web design Kerala', 'responsive websites Trivandrum'],
+        openGraph: {
+          title: 'Business Website Design & Development in Kerala | Bytespire',
+          description: 'Professional corporate and business websites engineered for speed, search visibility, and maximum conversion rates.',
+          images: [{ url: '/logo.svg' }],
+        },
+      },
+    },
+    {
+      id: 'ai-solutions',
+      title: 'AI Solutions & Enterprise Automation',
+      description: 'Leverage cutting-edge Artificial Intelligence to automate business operations, integrate intelligent chatbots, analyze predictive data, and deliver autotrophic AI workflows.',
+      icon: Bot,
+      image: '/agentic_ai_cover.png',
+      features: ['Custom AI Agents & Workflows', 'Intelligent Customer Support Chatbots', 'Predictive Business Analytics', 'LLM & API Integrations'],
+      meta: {
+        title: 'AI Solutions & Enterprise Automation in Kerala | Bytespire',
+        description: 'Transform your business with cutting-edge AI solutions, custom intelligent agents, workflow automation, and machine learning integrations by Bytespire in Kerala.',
+        keywords: ['AI solutions Kerala', 'AI development company Kochi', 'enterprise AI automation Kerala', 'AI chatbot development Calicut', 'machine learning company India'],
+        openGraph: {
+          title: 'AI Solutions & Enterprise Automation in Kerala | Bytespire',
+          description: 'Empower your business with next-generation Artificial Intelligence, smart chatbots, and automated workflows.',
+          images: [{ url: '/logo.svg' }],
+        },
+      },
     }
   ],
 
@@ -133,40 +196,106 @@ export const technologyServices = {
     primaryButton: { label: 'Get a Free Consultation', href: '/contact' },
     secondaryButton: { label: 'View Our Portfolio', href: '/projects' },
   },
+  meta: {
+    title: 'Web & App Development Company in Kerala | Bytespire',
+    description: 'Looking for web or app development in Kerala? Bytespire builds responsive websites, mobile apps and custom software tailored to your business needs.',
+    keywords: [
+      'web development Kerala',
+      'app development company Kerala',
+      'mobile app development Kerala',
+      'software company in Kerala',
+      'custom software development Kerala',
+      'web design company Kochi',
+      'IT company Calicut',
+      'software developers Trivandrum'
+    ],
+    openGraph: {
+      title: 'Web & App Development Company in Kerala | Bytespire',
+      description: 'Looking for web or app development in Kerala? Bytespire builds responsive websites, mobile apps and custom software tailored to your business needs.',
+      images: [{ url: '/logo.svg' }],
+    },
+    alternates: {
+      canonical: 'https://bytespire.in/services/technology',
+    },
+  },
 };
 
 export const digitalMarketingServices = {
-  title: 'Data-Driven SEO & Digital Marketing',
-  description: 'Accelerate your growth with targeted marketing strategies. We combine creative campaigns with deep data analytics to maximize your ROI and dominate your digital presence.',
+  title: 'Digital Marketing & SEO Services',
+  description: "Grow your business with Bytespire's digital marketing services, including SEO, social media marketing and online advertising. Let's plan your growth.",
   bannerImage: '/service_marketing.png',
   subServices: [
     {
       id: 'seo-optimization',
       title: 'Search Engine Optimization (SEO)',
-      description: 'Improve your organic search visibility and drive high-quality traffic to your website through comprehensive on-page, off-page, and technical SEO strategies.',
+      description: 'Dominate organic search results and attract high-intent local and global customers. We deliver complete on-page optimization, technical site audits, authoritative link building, and localized keyword rankings.',
       icon: Search,
-      features: ['Keyword Research & Strategy', 'Technical SEO Audits', 'Link Building Campaigns', 'Local & Global SEO'],
+      image: '/service_marketing.png',
+      features: ['Local SEO ', 'Technical SEO & Core Web Vitals', 'High-Impact Keyword Strategy', 'Authority Link Building & Outreach'],
+      meta: {
+        title: 'Best SEO Agency in Kerala | Top Search Engine Optimization | ByteSpire',
+        description: 'Rank #1 on Google with ByteSpire, Kerala\'s premier SEO agency. Targeted local SEO in Kochi, Calicut & Trivandrum, technical audits, and high-converting organic search strategies.',
+        keywords: ['SEO company Kerala', 'SEO services Kochi', 'best SEO agency Calicut', 'local SEO Kerala', 'Google ranking experts Kerala'],
+        openGraph: {
+          title: 'Best SEO Agency in Kerala | Top Search Engine Optimization | ByteSpire',
+          description: 'Dominate organic search rankings and capture qualified customer leads across Kerala and global markets.',
+          images: [{ url: '/logo.svg' }],
+        },
+      },
     },
     {
-      id: 'pay-per-click',
-      title: 'Pay-Per-Click (PPC) Advertising',
-      description: 'Generate immediate, highly-targeted leads with data-driven advertising campaigns across Google, Bing, and major social media networks.',
-      icon: Target,
-      features: ['Google Ads Management', 'Social Media Advertising', 'Retargeting Campaigns', 'A/B Testing & Optimization'],
+      id: 'branding',
+      title: 'Branding & Corporate Identity',
+      description: 'Craft a distinct, memorable brand persona that commands trust and loyalty. From strategic positioning and bespoke logo systems to complete brand guidelines and digital touchpoints.',
+      icon: Sparkles,
+      image: '/service_branding.png',
+      features: ['Brand Strategy & Market Positioning', 'Distinctive Logo & Identity Design', 'Comprehensive Brand Style Guides', 'Marketing Collateral & Digital Assets'],
+      meta: {
+        title: 'Creative Branding & Identity Design Agency in Kerala | ByteSpire',
+        description: 'Build an iconic, enduring brand with ByteSpire. Strategic branding, custom logo design, visual identities, and marketing collateral for Kerala businesses.',
+        keywords: ['branding agency Kerala', 'logo design Kochi', 'brand identity company Calicut', 'corporate branding Kerala', 'creative agency Trivandrum'],
+        openGraph: {
+          title: 'Creative Branding & Identity Design Agency in Kerala | ByteSpire',
+          description: 'Build an iconic, enduring brand that connects with your target audience across Kerala and worldwide.',
+          images: [{ url: '/logo.svg' }],
+        },
+      },
     },
     {
-      id: 'content-marketing',
-      title: 'Content Marketing',
-      description: 'Engage your audience and establish authority in your industry with high-quality, relevant content tailored to your target demographic.',
-      icon: TrendingUp,
-      features: ['Blog & Article Writing', 'Video & Visual Content', 'Copywriting & Editing', 'Content Distribution'],
+      id: 'web-design-development',
+      title: 'Web Design & Development',
+      description: 'Build high-converting, lightning-fast, and responsive websites that turn visitors into loyal clients. We engineer modern, mobile-first websites with Next.js, React, and seamless UI/UX.',
+      icon: Layout,
+      image: '/service_tech.png',
+      features: ['Modern Responsive Web Design', 'Next.js & React High-Speed Builds', 'Conversion-Optimized Landing Pages', 'Custom CMS & E-Commerce Integration'],
+      meta: {
+        title: 'Web Design & Development Company in Kerala | ByteSpire',
+        description: 'Professional web design and development company in Kerala. High-performance, responsive websites and landing pages built to maximize business conversions.',
+        keywords: ['web design company Kerala', 'web development Kochi', 'website designers Calicut', 'landing page design Kerala', 'Next.js web development Kerala'],
+        openGraph: {
+          title: 'Web Design & Development Company in Kerala | ByteSpire',
+          description: 'High-performance, responsive, and conversion-focused web design and development engineered by ByteSpire.',
+          images: [{ url: '/logo.svg' }],
+        },
+      },
     },
     {
-      id: 'email-marketing',
-      title: 'Email Marketing & Automation',
-      description: 'Nurture leads and drive conversions with automated, personalized email workflows designed to keep your brand top-of-mind.',
-      icon: Mail,
-      features: ['Campaign Strategy', 'List Building & Segmentation', 'Automated Drip Campaigns', 'Performance Analytics'],
+      id: '360-marketing',
+      title: '360° Digital Marketing & Performance Ads',
+      description: 'All-inclusive multi-channel marketing campaigns built to scale revenue. Combining Google Ads, Meta advertising, content strategy, email automation, and influencer partnerships for complete market dominance.',
+      icon: Megaphone,
+      image: '/services_bg.png',
+      features: ['Full-Funnel Paid Advertising (Google & Meta)', 'Social Media Strategy & Management', 'Automated Email Drip Campaigns', 'Data-Driven ROI & Lead Generation'],
+      meta: {
+        title: '360° Digital Marketing & Growth Agency in Kerala | ByteSpire',
+        description: 'Accelerate business revenue with complete 360° digital marketing solutions in Kerala. Integrated PPC ads, social media management, email automation, and omnichannel lead generation.',
+        keywords: ['360 digital marketing Kerala', 'performance marketing agency Kochi', 'lead generation company Kerala', 'Google ads agency Calicut', 'social media marketing Trivandrum'],
+        openGraph: {
+          title: '360° Digital Marketing & Growth Agency in Kerala | ByteSpire',
+          description: 'All-inclusive 360° digital marketing and multi-channel campaigns to accelerate business growth in Kerala.',
+          images: [{ url: '/logo.svg' }],
+        },
+      },
     }
   ],
   solutions: {
@@ -251,6 +380,27 @@ export const digitalMarketingServices = {
     primaryButton: { label: 'Get a Marketing Audit', href: '/contact' },
     secondaryButton: { label: 'Explore Case Studies', href: '/projects' },
   },
+  meta: {
+    title: 'Digital Marketing Agency in Kerala | Bytespire',
+    description: "Grow your business with Bytespire's digital marketing services, including SEO, social media marketing and online advertising. Let's plan your growth.",
+    keywords: [
+      'digital marketing agency in Kerala',
+      'digital marketing Kerala',
+      'SEO agency Kochi',
+      'social media marketing Kerala',
+      'online advertising Kerala',
+      'PPC agency Trivandrum',
+      'best digital marketing company Calicut'
+    ],
+    openGraph: {
+      title: 'Digital Marketing Agency in Kerala | Bytespire',
+      description: "Grow your business with Bytespire's digital marketing services, including SEO, social media marketing and online advertising. Let's plan your growth.",
+      images: [{ url: '/logo.svg' }],
+    },
+    alternates: {
+      canonical: 'https://bytespire.in/services/digital-marketing',
+    },
+  },
 };
 
 export const experienceDesignServices = {
@@ -264,6 +414,16 @@ export const experienceDesignServices = {
       description: 'Understanding your users through in-depth research, persona development, and journey mapping to create experiences that truly resonate.',
       icon: Users,
       features: ['User Interviews & Surveys', 'Persona Development', 'Customer Journey Mapping', 'Usability Testing'],
+      meta: {
+        title: 'UX Research & Customer Journey Mapping in Kerala | ByteSpire',
+        description: 'Understand customer behaviors and eliminate friction with in-depth UX research, usability testing, and persona development tailored for businesses in Kerala.',
+        keywords: ['UX research Kerala', 'usability testing Kochi', 'user research agency Calicut', 'customer experience design Kerala'],
+        openGraph: {
+          title: 'UX Research & Customer Journey Mapping in Kerala | ByteSpire',
+          description: 'Data-driven UX research to uncover user pain points and optimize engagement.',
+          images: [{ url: '/logo.svg' }],
+        },
+      },
     },
     {
       id: 'ui-design',
@@ -271,6 +431,16 @@ export const experienceDesignServices = {
       description: 'Designing visually stunning, modern interfaces that align with your brand identity and delight users at every interaction.',
       icon: PenTool,
       features: ['Visual Design & Branding', 'Interactive Prototypes', 'Micro-interactions & Animation', 'Responsive Web/Mobile UI'],
+      meta: {
+        title: 'UI Design Agency in Kerala | Modern Web & App Interfaces | ByteSpire',
+        description: 'Award-winning UI designers in Kerala creating stunning, modern, and high-converting visual interfaces for mobile apps and web platforms.',
+        keywords: ['UI design company Kerala', 'web UI designers Kochi', 'mobile app UI design Calicut', 'Figma designers Kerala'],
+        openGraph: {
+          title: 'UI Design Agency in Kerala | ByteSpire',
+          description: 'Visually stunning, high-converting digital interfaces crafted for modern businesses.',
+          images: [{ url: '/logo.svg' }],
+        },
+      },
     },
     {
       id: 'wireframing',
@@ -278,6 +448,16 @@ export const experienceDesignServices = {
       description: 'Rapidly iterating on structural concepts and user flows before writing a single line of code, saving time and development costs.',
       icon: LayoutDashboard,
       features: ['Low & High-Fidelity Wireframes', 'Clickable Prototypes', 'Information Architecture', 'Flow Optimization'],
+      meta: {
+        title: 'Wireframing & Interactive Prototyping Services in Kerala | ByteSpire',
+        description: 'Validate product concepts quickly with interactive Figma prototypes and high-fidelity wireframing before engineering begins.',
+        keywords: ['wireframing services Kerala', 'rapid prototyping Kochi', 'interactive prototype design Calicut'],
+        openGraph: {
+          title: 'Wireframing & Interactive Prototyping Services in Kerala | ByteSpire',
+          description: 'Accelerate product delivery with validated wireframes and interactive prototypes.',
+          images: [{ url: '/logo.svg' }],
+        },
+      },
     },
     {
       id: 'design-systems',
@@ -285,6 +465,16 @@ export const experienceDesignServices = {
       description: 'Creating cohesive, scalable design systems that ensure consistency across all your digital products and speed up development.',
       icon: Layers,
       features: ['Component Libraries', 'Style Guides', 'Typography & Color Systems', 'Scalable Asset Management'],
+      meta: {
+        title: 'Design Systems & UI Component Libraries in Kerala | ByteSpire',
+        description: 'Build scalable, consistent digital products with enterprise Figma design systems and reusable UI component architectures.',
+        keywords: ['design systems company Kerala', 'Figma component library Kochi', 'brand style guides Kerala'],
+        openGraph: {
+          title: 'Design Systems & UI Component Libraries in Kerala | ByteSpire',
+          description: 'Establish visual consistency and rapid product scaling with custom design systems.',
+          images: [{ url: '/logo.svg' }],
+        },
+      },
     }
   ],
   solutions: {
@@ -369,6 +559,26 @@ export const experienceDesignServices = {
     primaryButton: { label: 'Start Your Design Project', href: '/contact' },
     secondaryButton: { label: 'View Design Portfolio', href: '/projects' },
   },
+  meta: {
+    title: 'Premier UI/UX Design Agency in Kerala | Product Design | ByteSpire',
+    description: 'Transform your customer experience with Kerala\'s top UI/UX design agency. User research, Figma wireframing, mobile app design, and design systems in Kochi & Calicut.',
+    keywords: [
+      'UI UX design agency Kerala',
+      'UI UX designer Kochi',
+      'product design company Kerala',
+      'website redesign Kerala',
+      'Figma designers Calicut',
+      'app UI design Trivandrum'
+    ],
+    openGraph: {
+      title: 'Premier UI/UX Design Agency in Kerala | ByteSpire',
+      description: 'Human-centered UI/UX design and product strategy for forward-thinking brands in Kerala and worldwide.',
+      images: [{ url: '/logo.svg' }],
+    },
+    alternates: {
+      canonical: 'https://bytespire.in/services/experience-design',
+    },
+  },
 };
 
 export const brandingServices = {
@@ -382,6 +592,16 @@ export const brandingServices = {
       description: 'Defining your brand\'s core purpose, values, and market positioning to create a strong foundation for all communication.',
       icon: Compass,
       features: ['Market & Competitor Analysis', 'Brand Positioning & Promise', 'Target Audience Personas', 'Brand Messaging Framework'],
+      meta: {
+        title: 'Brand Strategy & Positioning Consultants in Kerala | ByteSpire',
+        description: 'Define your competitive edge with market research, brand voice, and clear positioning for Kerala\'s growing businesses and startups.',
+        keywords: ['brand strategy Kerala', 'brand positioning Kochi', 'branding consultants Calicut', 'business branding Kerala'],
+        openGraph: {
+          title: 'Brand Strategy & Positioning Consultants in Kerala | ByteSpire',
+          description: 'Position your brand for market leadership with data-driven strategy and authentic storytelling.',
+          images: [{ url: '/logo.svg' }],
+        },
+      },
     },
     {
       id: 'logo-identity',
@@ -389,6 +609,16 @@ export const brandingServices = {
       description: 'Crafting distinctive logos and comprehensive visual identities that instantly communicate who you are and what you stand for.',
       icon: Sparkles,
       features: ['Custom Logo Design', 'Color Palette & Typography', 'Iconography & Graphic Elements', 'Complete Visual Identity Systems'],
+      meta: {
+        title: 'Logo Design & Visual Identity Agency in Kerala | ByteSpire',
+        description: 'Craft unforgettable logos and comprehensive visual identity packages that command trust and recognition across Kerala and global markets.',
+        keywords: ['logo design Kerala', 'visual identity agency Kochi', 'creative logo designers Calicut', 'corporate branding Kerala'],
+        openGraph: {
+          title: 'Logo Design & Visual Identity Agency in Kerala | ByteSpire',
+          description: 'Distinctive, premium logos and visual identity systems tailored for modern companies.',
+          images: [{ url: '/logo.svg' }],
+        },
+      },
     },
     {
       id: 'brand-guidelines',
@@ -396,6 +626,16 @@ export const brandingServices = {
       description: 'Creating detailed brand books that ensure consistency in how your brand is represented across all internal and external channels.',
       icon: Briefcase,
       features: ['Logo Usage Rules', 'Voice & Tone Guidelines', 'Visual Style Guidelines', 'Digital & Print Standards'],
+      meta: {
+        title: 'Brand Guidelines & Style Manual Creation in Kerala | ByteSpire',
+        description: 'Maintain complete brand consistency across touchpoints with comprehensive brand books, color rules, and typography manuals.',
+        keywords: ['brand guidelines Kerala', 'brand book designers Kochi', 'corporate style guide India'],
+        openGraph: {
+          title: 'Brand Guidelines & Style Manual Creation in Kerala | ByteSpire',
+          description: 'Protect your brand identity with clear, comprehensive brand guideline manuals.',
+          images: [{ url: '/logo.svg' }],
+        },
+      },
     },
     {
       id: 'brand-activation',
@@ -403,6 +643,16 @@ export const brandingServices = {
       description: 'Bringing your brand to life through impactful marketing collateral, packaging, and digital assets.',
       icon: Megaphone,
       features: ['Business Cards & Stationery', 'Marketing Materials & Brochures', 'Packaging Design', 'Social Media Branding'],
+      meta: {
+        title: 'Brand Activation, Packaging & Collateral Design in Kerala | ByteSpire',
+        description: 'Bring your brand to market with premium print collateral, custom packaging design, and digital marketing materials across Kerala.',
+        keywords: ['packaging design Kerala', 'marketing collateral Kochi', 'brochure design Calicut', 'print branding Kerala'],
+        openGraph: {
+          title: 'Brand Activation, Packaging & Collateral Design in Kerala | ByteSpire',
+          description: 'Tangible brand experiences with high-impact collateral, packaging, and digital assets.',
+          images: [{ url: '/logo.svg' }],
+        },
+      },
     }
   ],
   solutions: {
@@ -487,4 +737,44 @@ export const brandingServices = {
     primaryButton: { label: 'Start Your Branding Project', href: '/contact' },
     secondaryButton: { label: 'View Branding Portfolio', href: '/projects' },
   },
+  meta: {
+    title: 'Leading Branding Agency in Kerala | Corporate Identity & Logo Design | ByteSpire',
+    description: 'Build an iconic, enduring brand with Kerala\'s top creative branding agency. Distinctive logo design, brand strategy, packaging, and corporate identity in Kochi, Calicut & Trivandrum.',
+    keywords: [
+      'branding agency Kerala',
+      'logo design Kochi',
+      'corporate branding Calicut',
+      'creative agency Trivandrum',
+      'brand identity design Kerala',
+      'packaging design company Kerala'
+    ],
+    openGraph: {
+      title: 'Leading Branding Agency in Kerala | ByteSpire',
+      description: 'Build an iconic brand that connects with your audience across Kerala and global markets.',
+      images: [{ url: '/logo.svg' }],
+    },
+    alternates: {
+      canonical: 'https://bytespire.in/services/branding',
+    },
+  },
+};
+
+export const servicesMeta = {
+  technology: technologyServices.meta,
+  'digital-marketing': digitalMarketingServices.meta,
+  'experience-design': experienceDesignServices.meta,
+  branding: brandingServices.meta,
+};
+
+export const allServicesList = [
+  technologyServices,
+  digitalMarketingServices,
+  experienceDesignServices,
+  brandingServices
+];
+
+export const subServicesMeta = {
+  ...Object.fromEntries(
+    allServicesList.flatMap(s => (s.subServices || []).map(sub => [sub.id, sub.meta]))
+  )
 };

@@ -37,18 +37,16 @@ function HeroBanner() {
         {bannerImages.map((slide, idx) => (
           <div
             key={idx}
-            className={`absolute inset-0 w-full h-full transition-opacity duration-1000 ease-in-out ${
-              idx === currentSlide ? "opacity-100 z-0" : "opacity-0 -z-10"
-            }`}
+            className={`absolute inset-0 w-full h-full transition-opacity duration-1000 ease-in-out ${idx === currentSlide ? "opacity-100 z-0" : "opacity-0 -z-10"
+              }`}
           >
             <Image
               src={slide.src}
               alt={slide.alt}
               fill
               priority={idx === 0}
-              className={`object-cover transition-transform duration-[7000ms] ease-out ${
-                idx === currentSlide ? "scale-105" : "scale-100"
-              }`}
+              className={`object-cover transition-transform duration-[7000ms] ease-out ${idx === currentSlide ? "scale-105" : "scale-100"
+                }`}
             />
           </div>
         ))}
@@ -69,7 +67,7 @@ function HeroBanner() {
           </div>
 
           {/* Heading - Refined, Slightly Larger Balanced Size */}
-          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-[48px] font-light text-white leading-tight md:leading-[1.18] tracking-tight mb-4 drop-shadow-lg">
+          <h1 className="text-3xl sm:text-4xl md:text-6xl  font-light text-white leading-tight md:leading-[1.18] tracking-tight mb-4 drop-shadow-lg">
             Build Modern Web & <br className="hidden sm:inline" />
             <span className="font-normal text-white">Mobile Applications</span>
           </h1>
@@ -104,11 +102,10 @@ function HeroBanner() {
               key={idx}
               onClick={() => setCurrentSlide(idx)}
               aria-label={`Slide ${idx + 1}`}
-              className={`h-2 rounded-full transition-all duration-500 cursor-pointer ${
-                idx === currentSlide
-                  ? "bg-[#8e2157] w-8 shadow-sm shadow-[#8e2157]/50"
-                  : "bg-white/40 hover:bg-white/70 w-2"
-              }`}
+              className={`h-2 rounded-full transition-all duration-500 cursor-pointer ${idx === currentSlide
+                ? "bg-[#8e2157] w-8 shadow-sm shadow-[#8e2157]/50"
+                : "bg-white/40 hover:bg-white/70 w-2"
+                }`}
             />
           ))}
         </div>
