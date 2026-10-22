@@ -64,6 +64,21 @@ const pages = [
     priority: '0.70',
     changefreq: 'monthly',
   },
+  {
+    url: '/privacy',
+    priority: '0.50',
+    changefreq: 'monthly',
+  },
+  {
+    url: '/terms',
+    priority: '0.50',
+    changefreq: 'monthly',
+  },
+  {
+    url: '/cookies',
+    priority: '0.50',
+    changefreq: 'monthly',
+  },
 ];
 
 export async function GET() {
