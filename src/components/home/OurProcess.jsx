@@ -9,28 +9,28 @@ function OurProcess() {
       icon: Search,
       title: 'Discovery & Strategy',
       description:
-        'We begin by deeply understanding your business goals, target audience, and market landscape to formulate a tailored strategy across tech, design, or marketing.',
+        'We analyze your business goals, target audience, and project requirements to map out a clear roadmap and strategic plan.',
     },
     {
       number: '02',
       icon: PenTool,
       title: 'Design & Architecture',
       description:
-        'Our experts craft intuitive user experiences, robust technical architectures, and compelling brand identities that lay the perfect foundation for success.',
+        'Our team crafts intuitive UI/UX designs and robust system architectures tailored to deliver seamless user experiences and scalability.',
     },
     {
       number: '03',
       icon: Code2,
       title: 'Execution & Development',
       description:
-        'We bring the strategy to life. From writing clean code to deploying targeted campaigns, our team executes with precision and constant communication.',
+        'Leveraging modern technology stacks, our developers write clean, efficient code with continuous testing and quality assurance.',
     },
     {
       number: '04',
       icon: Rocket,
       title: 'Launch & Optimization',
       description:
-        'We don’t just deliver; we optimize. After a successful launch, we monitor performance, gather data, and refine the solution for maximum impact.',
+        'We deploy your product smoothly into production and provide ongoing performance monitoring, optimization, and support.',
     },
   ];
 
@@ -54,11 +54,11 @@ function OurProcess() {
             </div>
 
             <h2 className="text-2xl sm:text-3xl md:text-4xl font-light text-gray-900 leading-tight max-w-[480px]">
-              A Proven Process for Every Solution.
+              How We Work — Our Proven 4-Step Process
             </h2>
 
             <p className="text-gray-500 text-sm md:text-[15px] font-light leading-relaxed max-w-[460px]">
-              Whether we are building a complex application or launching a digital marketing campaign, our structured approach ensures predictable, high-quality results.
+              We follow a streamlined, transparent development methodology designed to bring your vision to life efficiently and effectively.
             </p>
 
             <div className="w-fit pt-2">

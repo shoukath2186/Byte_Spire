@@ -63,18 +63,18 @@ function HeroBanner() {
           {/* Badge */}
           <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full text-xs font-medium uppercase tracking-wider bg-[#8e2157]/25 text-pink-200 border border-[#8e2157]/40 mb-4 backdrop-blur-md">
             <Sparkles className="h-3 w-3 animate-pulse text-pink-300" />
-            <span>Empowering Digital Growth</span>
+            <h1>best digital marketing service for growing business</h1 >
           </div>
 
           {/* Heading - Refined, Slightly Larger Balanced Size */}
-          <h1 className="text-3xl sm:text-4xl md:text-6xl  font-light text-white leading-tight md:leading-[1.18] tracking-tight mb-4 drop-shadow-lg">
-            Build Modern Web & <br className="hidden sm:inline" />
-            <span className="font-normal text-white">Mobile Applications</span>
-          </h1>
+          <h2 className="text-3xl sm:text-4xl md:text-6xl  font-light text-white leading-tight md:leading-[1.18] tracking-tight mb-4 drop-shadow-lg">
+            We will Build, Develop <br className="hidden sm:inline" />
+            <span className="font-normal text-white"> and Deliver for you</span>
+          </h2>
 
           {/* Description - Balanced, Clean Legibility */}
           <p className="text-white/80 text-sm sm:text-[15px] font-light leading-relaxed max-w-lg mb-7 drop-shadow-sm">
-            We design and develop clean, scale-ready software solutions built around React, Node.js, and Cloud services to accelerate your company.
+            Our team helping for grow business in new digital way, We delivering cutting-edge application development and consulting services tailored to your business goals
           </p>
 
           {/* CTA Buttons */}

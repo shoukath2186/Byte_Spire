@@ -1,9 +1,9 @@
 import "./globals.css";
 
 export const metadata = {
-  title: "ByteSpire Innovations Pvt. Ltd | Digital Solutions & IT Services",
+  title: "Mobile App & Web Development Company in Kerala | ByteSpire ",
   description:
-    "ByteSpire Innovations Pvt. Ltd is a product and service-based IT company offering web development, mobile app development, and digital solutions. We empower businesses with cutting-edge technology and innovative software solutions.",
+    "ByteSpire is a leading IT services and digital marketing agency in Kerala, specializing in custom software development, web design, e-commerce stores, digital marketing, and mobile app solutions.",
   keywords: [
     "ByteSpire Innovations",
     "Byte Spire",

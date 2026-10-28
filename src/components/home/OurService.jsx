@@ -7,25 +7,25 @@ function OurService() {
   const services = [
     {
       image: '/service_tech.png',
-      title: 'Technology & Application Development',
+      title: 'Technology ',
       linkText: 'Explore technology',
       href: '/services/technology'
     },
     {
       image: '/service_marketing.png',
-      title: 'Data-Driven SEO & Digital Marketing',
+      title: 'Digital Marketing',
       linkText: 'View marketing strategies',
       href: '/services/digital-marketing'
     },
     {
       image: '/service_design.png',
-      title: 'User-Centric UI/UX & Experience Design',
+      title: 'Experience Design',
       linkText: 'See design process',
       href: '/services/experience-design'
     },
     {
       image: '/service_branding.png',
-      title: 'Corporate Identity & Brand Strategy',
+      title: 'Brand Strategy',
       linkText: 'Discover branding',
       href: '/services/branding'
     }

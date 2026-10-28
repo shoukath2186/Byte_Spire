@@ -1,43 +1,43 @@
 import React from 'react';
-import { Users, Settings, MessageSquare, Clock, LifeBuoy, Code2 } from 'lucide-react';
+import { Users, Settings, TrendingUp, Code2, MessageSquare, LifeBuoy } from 'lucide-react';
 
 function WyChoose() {
   const points = [
     {
       title: 'Expert Development Team',
       description:
-        'Our highly skilled developers bring years of experience across modern tech stacks. We build robust, scalable architectures that ensure your applications perform flawlessly under any load.',
+        'Our skilled engineers leverage cutting-edge technology and deep industry experience to build high-performance web and mobile applications.',
       icon: Users,
     },
     {
-      title: 'Custom Solutions',
+      title: 'Tailored Custom Solutions',
       description:
-        'Every solution we design is custom-tailored to solve your specific business challenges. You get exactly what your business needs to grow and succeed.',
+        'We architect bespoke software designed specifically to solve your unique business challenges and drive operational efficiency.',
       icon: Settings,
     },
     {
-      title: 'Transparent Communication',
+      title: 'Results-Driven Digital Marketing',
       description:
-        'We believe in absolute transparency. You stay informed at every stage of the project, with regular updates, clear reporting, and open channels.',
-      icon: MessageSquare,
-    },
-    {
-      title: 'On-Time Delivery',
-      description:
-        'We respect your deadlines and deliver on time, every time. Our agile methodology ensures predictable and timely releases without compromising quality.',
-      icon: Clock,
-    },
-    {
-      title: 'Ongoing Support',
-      description:
-        'Beyond launch, we provide dedicated support and maintenance so you are never left entirely on your own. We are your long-term technology partner.',
-      icon: LifeBuoy,
+        'Our targeted SEO, social media, and content marketing strategies maximize brand visibility, qualified leads, and measurable ROI.',
+      icon: TrendingUp,
     },
     {
       title: 'Clean & Scalable Code',
       description:
-        'We strictly follow industry best practices and guidelines. Our clean code ensures that your software is maintainable, highly optimized, and ready to scale.',
+        'We build secure, modular, and future-proof architectures that ensure smooth performance as your digital business grows.',
       icon: Code2,
+    },
+    {
+      title: 'Transparent Communication',
+      description:
+        'We maintain clear project roadmaps, regular updates, and honest reporting across every phase of the development lifecycle.',
+      icon: MessageSquare,
+    },
+    {
+      title: 'Ongoing Support & Maintenance',
+      description:
+        'Beyond deployment, we provide continuous monitoring, security updates, and technical optimization to ensure long-term success.',
+      icon: LifeBuoy,
     },
   ];
 
