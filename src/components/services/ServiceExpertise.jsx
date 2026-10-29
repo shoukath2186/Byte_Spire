@@ -3,6 +3,7 @@
 import React, { useState } from "react";
 import Image from "next/image";
 import { Check, Plus } from "lucide-react";
+import { resolveIcon } from "./innerServices/iconHelper";
 
 // Curated high-quality visuals mapped to sub-service categories
 const defaultCategoryImages = {
@@ -51,7 +52,7 @@ export default function ServiceExpertise({
       ? subServices[activeIdx]
       : subServices[0];
 
-  const ActiveIcon = activeItem?.icon;
+  const ActiveIcon = resolveIcon(activeItem?.icon);
 
   // Resolve image with fallback hierarchy
   const activeImage =
@@ -62,9 +63,10 @@ export default function ServiceExpertise({
 
   return (
     <section
-      className="py-16 md:py-24 px-6 bg-white border-t border-gray-100"
+      className="py-16 md:py-24 px-6 bg-white border-t border-gray-100 relative"
       id="ourProcessComponent4"
     >
+      <div id="services" className="absolute -top-20" />
       <div className="max-w-7xl mx-auto w-full">
         {/* Section Header */}
         <div className="mb-12 md:mb-16">
@@ -94,7 +96,7 @@ export default function ServiceExpertise({
             <div className="divide-y divide-gray-200 border-t border-gray-200">
               {subServices.map((sub, idx) => {
                 const isOpen = activeIdx === idx;
-                const Icon = sub.icon;
+                const Icon = resolveIcon(sub.icon);
                 const formattedNumber = String(idx + 1).padStart(2, "0");
 
                 return (

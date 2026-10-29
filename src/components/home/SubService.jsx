@@ -14,8 +14,8 @@ export default function SubService() {
             title: 'Web Design & Development',
             description:
                 'We craft modern, responsive, and high-performing websites engineered to elevate your online presence and turn visitors into loyal customers. Utilizing cutting-edge frontend frameworks and secure backend architectures, our web development services prioritize speed, SEO optimization, intuitive UI/UX design, and seamless cross-device compatibility tailored to your brand identity.',
-            ctaText: 'Get Started with Web Development',
-            href: '/contact',
+            ctaText: 'More Details',
+            href: '/services/technology/web-development-service',
             image: '/service_tech.png',
             tag: 'Next.js & Modern Web',
         },
@@ -24,8 +24,8 @@ export default function SubService() {
             title: 'E-Commerce Store Development',
             description:
                 'Boost your online sales with custom, secure, and scalable e-commerce platforms built for optimal conversion rates. From custom Shopify and WooCommerce integration to tailor-made enterprise storefronts, we build high-speed e-commerce solutions complete with intuitive product management, secure payment gateway integrations, automated inventory tracking, and smooth checkout experiences.',
-            ctaText: 'Build Your Online Store',
-            href: '/contact',
+            ctaText: 'More Details',
+            href: '/services/technology/ecommerce-development',
             image: '/service_ecommerce.jpg',
             tag: 'Shopify & Enterprise Stores',
         },
@@ -34,8 +34,8 @@ export default function SubService() {
             title: 'Custom Software Development',
             description:
                 'Solve complex business challenges with custom-engineered software solutions designed specifically to streamline your operations and drive growth. We design, build, and deploy enterprise-grade SaaS applications, internal workflow automation tools, and API integrations that offer high scalability, robust cloud security, and long-term efficiency.',
-            ctaText: 'Request Custom Solution',
-            href: '/contact',
+            ctaText: 'More Details',
+            href: '/services/technology/custom-software-development',
             image: '/service_custom_software.jpg',
             tag: 'SaaS & Enterprise Tools',
         },
@@ -44,8 +44,8 @@ export default function SubService() {
             title: 'Mobile App Development',
             description:
                 'Reach your audience anywhere with feature-rich native and cross-platform mobile applications for iOS and Android. Leveraging React Native and Flutter, we deliver intuitive, high-performance mobile apps featuring sleek user interfaces, offline capabilities, real-time sync, and enterprise-level backend connectivity.',
-            ctaText: 'Develop Your Mobile App',
-            href: '/contact',
+            ctaText: 'More Details',
+            href: '/services/technology/mobile-app-development',
             image: '/service_mobile.jpg',
             tag: 'iOS & Android Native / Hybrid',
         },
@@ -135,7 +135,7 @@ export default function SubService() {
                                                 <div>
                                                     <Link
                                                         href={service.href}
-                                                        className="inline-flex items-center gap-2.5 bg-black text-white text-sm font-medium px-6 py-3 rounded-full hover:bg-[#6b1842] hover:scale-105 transition-all duration-300 shadow-[0_6px_20px_rgba(142,33,87,0.25)] hover:shadow-[0_10px_25px_rgba(142,33,87,0.35)]"
+                                                        className="inline-flex items-center gap-2.5 bg-black text-white text-sm font-medium px-6 py-3 rounded-full hover:bg-[#6b1842] transition-all duration-300 "
                                                     >
                                                         {service.ctaText}
                                                         <ArrowUpRight className="w-4 h-4" />

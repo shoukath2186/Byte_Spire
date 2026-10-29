@@ -70,6 +70,21 @@ export default function ServiceCTA({ cta }) {
               </Link>
             )}
           </div>
+
+          {/* Additional Secondary Links */}
+          {cta.secondaryLinks && cta.secondaryLinks.length > 0 && (
+            <div className="flex flex-wrap items-center gap-x-6 gap-y-2 mt-6 pt-6 border-t border-white/15">
+              {cta.secondaryLinks.map((link, lIdx) => (
+                <Link
+                  key={lIdx}
+                  href={link.href}
+                  className="inline-flex items-center text-white/80 hover:text-white text-sm font-light underline underline-offset-4 decoration-white/30 hover:decoration-white transition-colors"
+                >
+                  {link.label}
+                </Link>
+              ))}
+            </div>
+          )}
         </div>
       </div>
     </section>

@@ -10,6 +10,9 @@ export default function ServiceBanner({
   bannerImage,
   backHref = "/services",
   backLabel = "Back to Services",
+  primaryCta,
+  secondaryCta,
+  trustHighlights,
 }) {
   return (
     <section className="relative bg-black pt-28 pb-20 md:pt-36 md:pb-28 px-6 overflow-hidden">
@@ -41,15 +44,57 @@ export default function ServiceBanner({
           </div> */}
 
           {/* Title */}
-          <h1 className="text-3xl sm:text-4xl md:text-5xl  font-light text-white leading-tight mb-6 drop-shadow-lg">
+          <h1 className="text-3xl sm:text-4xl md:text-5xl font-light text-white leading-tight mb-6 drop-shadow-lg">
             {title}
           </h1>
 
           {/* Description */}
           {description && (
-            <p className="text-white/75 text-sm sm:text-base md:text-lg font-light leading-relaxed max-w-2xl">
+            <p className="text-white/75 text-sm sm:text-base md:text-lg font-light leading-relaxed max-w-2xl mb-8">
               {description}
             </p>
+          )}
+
+          {/* Optional Action Buttons */}
+          {(primaryCta || secondaryCta) && (
+            <div className="flex flex-wrap items-center gap-4 mb-8">
+              {primaryCta && (
+                <Link
+                  href={primaryCta.href || "/contact"}
+                  className="px-6 py-3.5 bg-[#8e2157] hover:bg-[#a62d6a] text-white rounded-xl text-sm font-medium transition-all shadow-lg hover:shadow-[#8e2157]/40 flex items-center gap-2 group cursor-pointer"
+                >
+                  <span>{primaryCta.label}</span>
+                  <ChevronRight className="w-4 h-4 group-hover:translate-x-0.5 transition-transform" />
+                </Link>
+              )}
+              {secondaryCta && (
+                <Link
+                  href={secondaryCta.href || "#services"}
+                  className="px-6 py-3.5 bg-white/10 hover:bg-white/20 text-white border border-white/20 rounded-xl text-sm font-medium transition-all backdrop-blur-sm cursor-pointer"
+                >
+                  {secondaryCta.label}
+                </Link>
+              )}
+            </div>
+          )}
+
+          {/* Social Proof & Trust Highlights */}
+          {trustHighlights && trustHighlights.length > 0 && (
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-6 border-t border-white/15">
+              {trustHighlights.map((highlight, idx) => (
+                <div key={idx} className="flex items-start gap-3">
+                  <div className="w-2.5 h-2.5 rounded-full bg-[#8e2157] mt-1.5 shrink-0 ring-4 ring-[#8e2157]/30" />
+                  <div>
+                    <h4 className="text-white text-sm font-medium leading-snug">
+                      {highlight.title}
+                    </h4>
+                    <p className="text-white/60 text-xs mt-0.5 leading-relaxed">
+                      {highlight.description}
+                    </p>
+                  </div>
+                </div>
+              ))}
+            </div>
           )}
         </div>
       </div>

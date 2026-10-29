@@ -3,5 +3,5 @@ Allow: /
 Disallow: /admin
 Disallow: /api/
 
-Sitemap: https://www.bytespire.in/sitemap.xml
+
 Sitemap: https://bytespire.in/sitemap.xml

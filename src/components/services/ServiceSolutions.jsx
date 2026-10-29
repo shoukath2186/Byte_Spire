@@ -1,6 +1,7 @@
 "use client";
 
 import React from "react";
+import { resolveIcon } from "./innerServices/iconHelper";
 
 export default function ServiceSolutions({ solutions }) {
   if (!solutions || !solutions.points || solutions.points.length === 0) return null;
@@ -35,7 +36,7 @@ export default function ServiceSolutions({ solutions }) {
         {/* Solutions Grid */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
           {solutions.points.map((point, idx) => {
-            const Icon = point.icon;
+            const Icon = resolveIcon(point.icon);
             return (
               <div
                 key={idx}

@@ -7,9 +7,10 @@ import Footer from "@/components/layout/Footer";
 import ServiceBanner from "./ServiceBanner";
 import ServiceExpertise from "./ServiceExpertise";
 import ServiceSolutions from "./ServiceSolutions";
+import ServiceTechStack from "./ServiceTechStack";
 import ServiceProcess from "./ServiceProcess";
 import ServiceFAQ from "./ServiceFAQ";
-import FinalCTA from "@/components/home/FinalCTA";
+import ServiceCTA from "./ServiceCTA";
 import OutClientsSay from "@/components/home/OutClientsSay";
 
 export default function ServiceDetailTemplate({ service }) {
@@ -43,30 +44,39 @@ export default function ServiceDetailTemplate({ service }) {
       <Header />
 
       <main className="flex-grow">
-        {/* Banner Section — with description */}
+        {/* Banner Section — with headline, subheadline, actions, and trust signals */}
         <ServiceBanner
-          title={service.title}
-          description={service.description}
+          title={service.hero?.headline || service.title}
+          description={service.hero?.subheadline || service.description}
           bannerImage={service.bannerImage}
+          primaryCta={service.hero?.primaryCta}
+          secondaryCta={service.hero?.secondaryCta}
+          trustHighlights={service.hero?.trustHighlights}
         />
 
         {/* Sub-Services / Expertise Section — highlighted cards */}
-        <ServiceExpertise subServices={service.subServices} />
+        <ServiceExpertise
+          title={service.servicesTitle || "Our Core Services"}
+          subServices={service.subServices}
+        />
 
-        {/* Solutions Section */}
+        {/* Solutions / Expertise Section */}
         <ServiceSolutions solutions={service.solutions} />
 
-        {/* Process Section — sticky cards like homepage */}
+        {/* Tech Stack Section (if provided) */}
+        {service.techStack && <ServiceTechStack techStack={service.techStack} />}
+
+        {/* Process Section — sticky cards */}
         <ServiceProcess process={service.process} />
 
         {/* FAQ Accordion Section */}
         <ServiceFAQ faq={service.faq} />
 
-        {/* Client Testimonials — same as homepage */}
+        {/* Client Testimonials */}
         <OutClientsSay />
 
-        {/* CTA — same as homepage */}
-        <FinalCTA />
+        {/* Call to Action */}
+        <ServiceCTA cta={service.cta} />
       </main>
 
       <Footer />
