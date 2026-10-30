@@ -17,6 +17,23 @@ import {
   Sparkles,
   CreditCard,
   Truck,
+  Search,
+  Target,
+  Megaphone,
+  Users,
+  Award,
+  Mail,
+  FileText,
+  Compass,
+  Layers,
+  Activity,
+  Database,
+  LineChart,
+  Sliders,
+  Eye,
+  CheckCircle2,
+  Share2,
+  MessageCircle,
 } from "lucide-react";
 
 const ICON_MAP = {
@@ -37,6 +54,23 @@ const ICON_MAP = {
   sparkles: Sparkles,
   "credit-card": CreditCard,
   truck: Truck,
+  search: Search,
+  target: Target,
+  megaphone: Megaphone,
+  users: Users,
+  award: Award,
+  mail: Mail,
+  "file-text": FileText,
+  compass: Compass,
+  layers: Layers,
+  activity: Activity,
+  database: Database,
+  "line-chart": LineChart,
+  sliders: Sliders,
+  eye: Eye,
+  "check-circle": CheckCircle2,
+  share: Share2,
+  "message-circle": MessageCircle,
 };
 
 export function resolveIcon(icon) {
@@ -46,4 +80,3 @@ export function resolveIcon(icon) {
   }
   return icon;
 }
-

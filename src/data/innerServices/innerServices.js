@@ -1,3 +1,5 @@
+import { innerMarketingServices } from "./innerServicesForMarketing";
+
 export const webDevelopmentService = {
     id: "web-development",
     slug: "web-development",
@@ -1334,5 +1336,5 @@ export const innerServices = {
 export function getInnerService(slug) {
     if (!slug) return null;
     const normalized = slug.toLowerCase().trim();
-    return innerServices[normalized] || null;
+    return innerServices[normalized] || innerMarketingServices[normalized] || null;
 }

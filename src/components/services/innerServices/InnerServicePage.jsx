@@ -80,7 +80,11 @@ export default function InnerServicePage({ service }) {
 
 
         {/* Section 7: Frequently Asked Questions (FAQ) */}
-        <InnerFAQ faq={service.faq} />
+        <InnerFAQ
+          faq={service.faq}
+          title={service.faqTitle}
+          description={service.faqDescription}
+        />
 
 
       </main>

@@ -4,7 +4,7 @@ import React, { useState } from "react";
 import Link from "next/link";
 import { Plus, Minus, MessageCircle } from "lucide-react";
 
-export default function InnerFAQ({ faq }) {
+export default function InnerFAQ({ faq, title, description }) {
   const [openIndex, setOpenIndex] = useState(0);
 
   const faqItems = faq || [];
@@ -25,11 +25,12 @@ export default function InnerFAQ({ faq }) {
             </div>
 
             <h2 className="text-3xl sm:text-4xl md:text-5xl font-light text-gray-900 leading-[1.15] mb-5">
-              Frequently Asked Questions
+              {title || "Frequently Asked Questions"}
             </h2>
 
             <p className="text-gray-500 text-base font-light leading-relaxed mb-8 max-w-xs">
-              Direct answers to the most common questions about our web development services, timelines, and processes.
+              {description ||
+                "Direct answers to common client questions regarding our services, strategies, and performance reporting."}
             </p>
 
             {/* FAQ count indicator */}

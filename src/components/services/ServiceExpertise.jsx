@@ -2,7 +2,8 @@
 
 import React, { useState } from "react";
 import Image from "next/image";
-import { Check, Plus } from "lucide-react";
+import Link from "next/link";
+import { Check, Plus, ArrowUpRight } from "lucide-react";
 import { resolveIcon } from "./innerServices/iconHelper";
 
 // Curated high-quality visuals mapped to sub-service categories
@@ -182,6 +183,19 @@ export default function ServiceExpertise({
                                   </li>
                                 ))}
                               </ul>
+                            </div>
+                          )}
+
+                          {/* Link to Inner Service Page if available */}
+                          {sub.href && (
+                            <div className="mt-5 pt-2">
+                              <Link
+                                href={sub.href}
+                                className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-[#8e2157] text-white text-xs sm:text-sm font-medium hover:bg-[#6b1842] transition-all duration-300 shadow-sm hover:shadow"
+                              >
+                                <span>Learn More About {sub.title}</span>
+                                <ArrowUpRight className="w-4 h-4" />
+                              </Link>
                             </div>
                           )}
                         </div>

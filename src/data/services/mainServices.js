@@ -13,6 +13,7 @@ export const technologyServices = {
   subServices: [
     {
       id: 'mobile-development',
+      href: '/services/technology/mobile-app-development',
       title: 'Mobile App Development',
       description: 'Engineer native and cross-platform mobile apps for iOS and Android that deliver intuitive experiences, blazing speeds, and high engagement on mobile devices.',
       icon: Smartphone,
@@ -31,6 +32,7 @@ export const technologyServices = {
     },
     {
       id: 'custom-software',
+      href: '/services/technology/custom-software-development',
       title: 'Custom Software for Business',
       description: 'Develop tailored software solutions designed specifically to address your unique operational bottlenecks, automate repetitive workflows, and accelerate business productivity.',
       icon: Code,
@@ -49,6 +51,7 @@ export const technologyServices = {
     },
     {
       id: 'ecommerce-store',
+      href: '/services/technology/ecommerce-development',
       title: 'E-Commerce Store Development',
       description: 'Launch high-converting, secure online stores built for scale. Complete with multi-currency payment gateways, inventory management, fast checkout, and mobile-first storefronts.',
       icon: ShoppingBag,
@@ -67,6 +70,7 @@ export const technologyServices = {
     },
     {
       id: 'business-websites',
+      href: '/services/technology/web-development-service',
       title: 'Business Websites',
       description: 'Create modern, lightning-fast, and responsive business websites that build instant credibility, showcase your authority, and convert visitors into qualified leads.',
       icon: Layout,
@@ -227,6 +231,7 @@ export const digitalMarketingServices = {
   subServices: [
     {
       id: 'seo-optimization',
+      href: '/services/digital-marketing/seo-optimization',
       title: 'Search Engine Optimization (SEO)',
       description: 'Dominate organic search results and attract high-intent local and global customers. We deliver complete on-page optimization, technical site audits, authoritative link building, and localized keyword rankings.',
       icon: Search,
@@ -245,6 +250,7 @@ export const digitalMarketingServices = {
     },
     {
       id: 'branding',
+      href: '/services/digital-marketing/branding',
       title: 'Branding & Corporate Identity',
       description: 'Craft a distinct, memorable brand persona that commands trust and loyalty. From strategic positioning and bespoke logo systems to complete brand guidelines and digital touchpoints.',
       icon: Sparkles,
@@ -281,6 +287,7 @@ export const digitalMarketingServices = {
     },
     {
       id: '360-marketing',
+      href: '/services/digital-marketing/360-marketing',
       title: '360° Digital Marketing & Performance Ads',
       description: 'All-inclusive multi-channel marketing campaigns built to scale revenue. Combining Google Ads, Meta advertising, content strategy, email automation, and influencer partnerships for complete market dominance.',
       icon: Megaphone,
@@ -357,6 +364,53 @@ export const digitalMarketingServices = {
         step: '06',
         title: 'Transparent Reporting',
         description: 'Providing clear, actionable reports on KPIs, so you always know how your investment is performing.',
+      },
+    ],
+  },
+  techStack: {
+    badge: 'Marketing Technology Stack',
+    title: 'Industry-Standard Platforms & Growth Tools',
+    description: 'Enterprise advertising suites, technical SEO diagnostic software, and data analytics platforms leveraged by ByteSpire.',
+    categories: [
+      {
+        title: 'SEO Intelligence & SERP Tools',
+        icon: 'search',
+        items: [
+          {
+            label: 'Search & Keyword Analytics',
+            tech: ['Ahrefs', 'SEMrush', 'Google Search Console', 'Screaming Frog', 'Moz Pro'],
+          },
+        ],
+      },
+      {
+        title: 'Performance Ads & Paid Media',
+        icon: 'target',
+        items: [
+          {
+            label: 'Advertising Platforms',
+            tech: ['Google Ads', 'Meta Ads Manager', 'LinkedIn Ads', 'YouTube Ads', 'Microsoft Advertising'],
+          },
+        ],
+      },
+      {
+        title: 'Analytics, Attribution & CRO',
+        icon: 'bar-chart',
+        items: [
+          {
+            label: 'Measurement & Speed Testing',
+            tech: ['Google Analytics 4', 'Meta CAPI', 'Google Tag Manager', 'PageSpeed Insights', 'Hotjar'],
+          },
+        ],
+      },
+      {
+        title: 'Marketing Automation & CRM',
+        icon: 'mail',
+        items: [
+          {
+            label: 'Email & Retention Platforms',
+            tech: ['Klaviyo', 'HubSpot', 'Mailchimp', 'Brevo', 'ActiveCampaign'],
+          },
+        ],
       },
     ],
   },

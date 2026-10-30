@@ -37,7 +37,7 @@ export default function InnerProcess({ process }) {
   const active = steps[activeStep];
   const ActiveIcon = STEP_ICONS[activeStep] || Code2;
   const activeColor = STEP_COLORS[activeStep] || STEP_COLORS[0];
-  const activeTags = STEP_TAGS[activeStep] || [];
+  const activeTags = active?.deliverables || active?.tags || STEP_TAGS[activeStep] || [];
 
   return (
     <section className="bg-white py-20 md:py-28 overflow-hidden relative">

@@ -84,7 +84,12 @@ export default function InnerHero({ hero, bannerImage, slug }) {
             <ChevronRight className="w-3 h-3 text-white/30" />
             <Link href="/services" className="hover:text-white transition-colors duration-200">Services</Link>
             <ChevronRight className="w-3 h-3 text-white/30" />
-            <Link href="/services/technology" className="hover:text-white transition-colors duration-200">Technology</Link>
+            <Link
+              href={hero?.parentCategory?.href || "/services/technology"}
+              className="hover:text-white transition-colors duration-200"
+            >
+              {hero?.parentCategory?.label || "Technology"}
+            </Link>
             <ChevronRight className="w-3 h-3 text-white/30" />
             <span className="text-pink-200 font-medium">
               {hero?.breadcrumbLabel || "Web Development"}

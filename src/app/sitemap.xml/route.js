@@ -45,6 +45,26 @@ const pages = [
     changefreq: 'monthly',
   },
   {
+    url: '/services/digital-marketing/seo-optimization',
+    priority: '0.85',
+    changefreq: 'monthly',
+  },
+  {
+    url: '/services/seo',
+    priority: '0.85',
+    changefreq: 'monthly',
+  },
+  {
+    url: '/services/digital-marketing/360-marketing',
+    priority: '0.85',
+    changefreq: 'monthly',
+  },
+  {
+    url: '/services/digital-marketing/branding',
+    priority: '0.85',
+    changefreq: 'monthly',
+  },
+  {
     url: '/services/experience-design',
     priority: '0.85',
     changefreq: 'monthly',
