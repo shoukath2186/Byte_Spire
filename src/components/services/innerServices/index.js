@@ -1,5 +1,6 @@
 export { default as InnerServicePage } from "./InnerServicePage";
 export { default as InnerHero } from "./InnerHero";
+export { default as InnerStats } from "./InnerStats";
 export { default as InnerExpertise } from "./InnerExpertise";
 export { default as InnerServicesList } from "./InnerServicesList";
 export { default as InnerProcess } from "./InnerProcess";

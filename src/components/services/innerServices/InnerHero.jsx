@@ -3,7 +3,7 @@
 import React from "react";
 import Link from "next/link";
 import Image from "next/image";
-import { ChevronRight, ArrowRight, Zap, Globe, Star, TrendingUp } from "lucide-react";
+import { ChevronRight, ArrowRight, Sparkles, CheckCircle2 } from "lucide-react";
 
 export default function InnerHero({ hero, bannerImage, slug }) {
   const headline =
@@ -12,12 +12,13 @@ export default function InnerHero({ hero, bannerImage, slug }) {
   const subheadline =
     hero?.subheadline ||
     "ByteSpire engineers high-speed, SEO-optimized web platforms built for growth. From Kerala to global markets, we deliver digital excellence at every pixel.";
+  const badge = hero?.badge || "Web Engineering Excellence";
   const primaryCta = hero?.primaryCta || {
-    label: "Build Your Website Today",
+    label: "Start Your Project",
     href: "/contact",
   };
   const secondaryCta = hero?.secondaryCta || {
-    label: "Explore Web Solutions",
+    label: "Explore Services",
     href: "#services-section",
   };
   const trustHighlights = hero?.trustHighlights || [
@@ -29,145 +30,118 @@ export default function InnerHero({ hero, bannerImage, slug }) {
 
   const heroImage = bannerImage || "/service_tech.png";
 
-  const stats = [
-    { label: "Projects Delivered", value: "120+" },
-    { label: "Core Web Vitals", value: "100/100" },
-    { label: "Avg Load Time", value: "<0.8s" },
-  ];
+  const renderHeadline = (text) => {
+    if (!text) return null;
+    if (text.includes(" & ")) {
+      const parts = text.split(" & ");
+      return (
+        <>
+          {parts[0]} &amp; <br className="hidden sm:inline" />
+          <span className="font-normal text-[#c45d8a]">{parts.slice(1).join(" & ")}</span>
+        </>
+      );
+    }
+    if (text.includes(" in ")) {
+      const parts = text.split(" in ");
+      return (
+        <>
+          {parts[0]}{" "}
+          <span className="font-normal text-[#c45d8a]">in {parts.slice(1).join(" in ")}</span>
+        </>
+      );
+    }
+    return text;
+  };
 
   return (
-    <section className="relative bg-black min-h-screen flex flex-col overflow-hidden">
-      {/* ── Two-column layout ── */}
-      <div className="flex flex-col lg:flex-row flex-1 min-h-screen">
+    <section className="relative min-h-[85vh] md:min-h-screen w-full flex items-center justify-center bg-black overflow-hidden">
+      {/* Full-width Background Banner Image */}
+      <div className="absolute inset-0 w-full h-full pointer-events-none overflow-hidden bg-black">
+        <Image
+          src={heroImage}
+          alt={headline}
+          fill
+          priority
+          className="object-cover object-center"
+        />
+      </div>
 
-        {/* LEFT column — Text */}
-        <div className="relative z-20 flex flex-col justify-center px-6 sm:px-10 lg:px-16 xl:px-20 pt-32 pb-16 lg:pt-40 lg:pb-24 lg:w-[52%] xl:w-[48%]">
-          {/* Ambient glow */}
-          <div className="absolute -top-40 -left-20 w-[500px] h-[500px] bg-[#8e2157]/20 rounded-full blur-[140px] pointer-events-none" />
+      {/* Dark gradient overlays matching homepage for pristine legibility */}
+      <div className="absolute inset-0 bg-gradient-to-r from-black/95 via-black/80 to-black/45 z-10 pointer-events-none" />
+      <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-transparent to-black/90 z-10 pointer-events-none" />
+      <div className="absolute top-0 inset-x-0 bg-gradient-to-b from-black/80 via-black/30 to-transparent h-32 z-20 pointer-events-none" />
 
-          {/* Breadcrumb */}
-          <nav className="flex items-center flex-wrap gap-1.5 text-white/45 text-xs font-light mb-8 relative z-10">
+      {/* Ambient Glow */}
+      <div className="absolute -top-32 -left-32 w-96 h-96 bg-[#8e2157]/25 rounded-full blur-[140px] pointer-events-none z-10" />
+
+      {/* Main Banner Content Area — Home-page-like alignment */}
+      <div className="relative z-20 w-full max-w-7xl mx-auto px-6 sm:px-8 lg:px-12 pt-32 sm:pt-36 md:pt-40 pb-20 sm:pb-24 flex flex-col justify-center">
+        <div className="max-w-3xl text-left">
+
+          {/* Breadcrumb Navigation */}
+          <nav aria-label="Breadcrumb" className="flex items-center flex-wrap gap-1.5 text-white/50 text-xs font-light mb-5">
             <Link href="/" className="hover:text-white transition-colors duration-200">Home</Link>
-            <ChevronRight className="w-3 h-3 text-white/25" />
+            <ChevronRight className="w-3 h-3 text-white/30" />
             <Link href="/services" className="hover:text-white transition-colors duration-200">Services</Link>
-            <ChevronRight className="w-3 h-3 text-white/25" />
+            <ChevronRight className="w-3 h-3 text-white/30" />
             <Link href="/services/technology" className="hover:text-white transition-colors duration-200">Technology</Link>
-            <ChevronRight className="w-3 h-3 text-white/25" />
-            <span className="text-[#c45d8a] font-medium">
+            <ChevronRight className="w-3 h-3 text-white/30" />
+            <span className="text-pink-200 font-medium">
               {hero?.breadcrumbLabel || "Web Development"}
             </span>
           </nav>
 
-          {/* Badge */}
-          <div className="relative z-10 mb-6 inline-flex items-center gap-2 self-start px-4 py-1.5 rounded-full bg-[#8e2157]/15 border border-[#8e2157]/35 backdrop-blur-sm">
-            <span className="w-1.5 h-1.5 rounded-full bg-[#c45d8a] animate-pulse" />
-            <span className="text-[11px] font-semibold uppercase tracking-[0.18em] text-pink-200/90">
-              {hero?.badge || "Web Engineering Excellence"}
-            </span>
+          {/* Homepage-styled Badge */}
+          <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full text-xs font-medium uppercase tracking-wider bg-[#8e2157]/25 text-pink-200 border border-[#8e2157]/40 mb-5 backdrop-blur-md">
+            <Sparkles className="h-3 w-3 animate-pulse text-pink-300" />
+            <span>{badge}</span>
           </div>
 
-          {/* Headline */}
-          <h1 className="relative z-10 text-3xl sm:text-4xl md:text-5xl xl:text-[3.4rem] font-light text-white leading-[1.12] mb-6 max-w-xl">
-            {headline.includes(" & ") ? (
-              <>
-                {headline.split(" & ")[0]} &amp;{" "}
-                <br className="hidden md:block" />
-                <span className="text-[#c45d8a]">{headline.split(" & ").slice(1).join(" & ")}</span>
-              </>
-            ) : (
-              headline
-            )}
+          {/* Main Headline */}
+          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-light text-white leading-tight md:leading-[1.18] tracking-tight mb-5 drop-shadow-lg">
+            {renderHeadline(headline)}
           </h1>
 
-          {/* Subheadline */}
-          <p className="relative z-10 text-white/65 text-base sm:text-lg font-light leading-relaxed mb-8 max-w-lg">
+          {/* Subheadline / Summary */}
+          <p className="text-white/80 text-sm sm:text-base md:text-lg font-light leading-relaxed max-w-2xl mb-8 drop-shadow-sm">
             {subheadline}
           </p>
 
-          {/* CTA Buttons */}
-          <div className="relative z-10 flex flex-wrap items-center gap-3 mb-10">
+          {/* CTA Buttons — Homepage-style rounded-full pills */}
+          <div className="flex flex-wrap items-center gap-3 mb-8">
             <Link
               href={primaryCta.href}
-              className="inline-flex items-center gap-2.5 px-7 py-3.5 bg-[#8e2157] hover:bg-[#a0275f] text-white rounded-xl text-sm font-medium transition-all duration-300 shadow-lg shadow-[#8e2157]/30 hover:shadow-[#8e2157]/50 hover:scale-[1.02]"
+              className="inline-flex items-center gap-2 bg-[#8e2157] text-white font-medium px-6 py-3 rounded-full text-sm hover:bg-[#6b1842] hover:scale-105 transition-all duration-300 shadow-[0_6px_18px_rgba(142,33,87,0.3)] hover:shadow-[0_10px_22px_rgba(142,33,87,0.4)]"
             >
               <span>{primaryCta.label}</span>
-              <ArrowRight className="w-4 h-4" />
+              <ArrowRight className="h-4 w-4" />
             </Link>
             <Link
               href={secondaryCta.href}
-              className="inline-flex items-center gap-2 px-6 py-3.5 bg-white/[0.06] hover:bg-white/[0.12] text-white/90 border border-white/15 hover:border-white/30 rounded-xl text-sm font-light transition-all duration-300 backdrop-blur-sm"
+              className="inline-flex items-center gap-2 bg-white/10 hover:bg-white/20 text-white border border-white/20 backdrop-blur-md font-light px-5 py-3 rounded-full text-sm hover:scale-105 transition-all duration-300"
             >
               <span>{secondaryCta.label}</span>
             </Link>
           </div>
 
-          {/* Trust Highlights — horizontal with dot separators */}
-          <div className="relative z-10 flex flex-wrap items-center gap-x-4 gap-y-2 pt-6 border-t border-white/[0.08]">
-            {trustHighlights.map((item, idx) => (
-              <React.Fragment key={idx}>
-                <span className="text-white/50 text-xs font-light">
-                  {typeof item === "string" ? item : item.title}
-                </span>
-                {idx < trustHighlights.length - 1 && (
-                  <span className="text-white/20 text-xs">·</span>
-                )}
-              </React.Fragment>
-            ))}
-          </div>
-        </div>
-
-        {/* RIGHT column — Image + overlay stats */}
-        <div className="relative lg:w-[48%] xl:w-[52%] min-h-[50vw] lg:min-h-0 overflow-hidden">
-          {/* Image */}
-          <Image
-            src={heroImage}
-            alt="Web Development"
-            fill
-            priority
-            className="object-cover object-center"
-          />
-          {/* Dark overlay */}
-          <div className="absolute inset-0 bg-gradient-to-r from-black via-black/40 to-transparent lg:from-black lg:via-black/20 lg:to-transparent" />
-          <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-black/20" />
-
-          {/* Floating stat card — top right */}
-          <div className="absolute top-8 right-6 hidden lg:flex flex-col gap-1 bg-black/50 backdrop-blur-md border border-white/10 rounded-2xl px-5 py-4">
-            <div className="flex items-center gap-2 text-[#c45d8a] mb-1">
-              <TrendingUp className="w-3.5 h-3.5" />
-              <span className="text-[10px] font-semibold uppercase tracking-widest text-white/50">Performance</span>
+          {/* Quick-catch Trust Highlight Badges */}
+          {trustHighlights && trustHighlights.length > 0 && (
+            <div className="flex flex-wrap items-center gap-2 sm:gap-3 pt-6 border-t border-white/10">
+              {trustHighlights.map((item, idx) => {
+                const title = typeof item === "string" ? item : item.title;
+                return (
+                  <span
+                    key={idx}
+                    className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full text-xs text-white/85 bg-white/[0.06] border border-white/10 backdrop-blur-sm"
+                  >
+                    <CheckCircle2 className="w-3.5 h-3.5 text-[#c45d8a] flex-shrink-0" />
+                    <span>{title}</span>
+                  </span>
+                );
+              })}
             </div>
-            <p className="text-white text-2xl font-light">100<span className="text-[#c45d8a]">/100</span></p>
-            <p className="text-white/40 text-[11px]">Core Web Vitals Score</p>
-          </div>
+          )}
 
-          {/* Floating stat card — bottom left on image */}
-          <div className="absolute bottom-8 left-6 hidden lg:flex items-center gap-3 bg-black/50 backdrop-blur-md border border-white/10 rounded-2xl px-5 py-3">
-            <div className="w-9 h-9 rounded-lg bg-[#8e2157]/30 border border-[#8e2157]/40 flex items-center justify-center">
-              <Zap className="w-4 h-4 text-[#c45d8a]" />
-            </div>
-            <div>
-              <p className="text-white text-sm font-medium">&lt;0.8s Load Time</p>
-              <p className="text-white/40 text-[11px]">Avg across all projects</p>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      {/* ── Stats Bar ── */}
-      <div className="relative z-20 bg-[#0d0d0d] border-t border-white/[0.06]">
-        <div className="max-w-7xl mx-auto px-6 sm:px-10 lg:px-16 flex flex-col sm:flex-row items-stretch divide-y sm:divide-y-0 sm:divide-x divide-white/[0.06]">
-          {stats.map((stat, idx) => (
-            <div
-              key={idx}
-              className="flex items-center gap-4 py-5 sm:py-6 sm:px-10 flex-1 first:pl-0 last:pr-0"
-            >
-              <div className="w-px h-8 bg-[#8e2157] hidden sm:block" />
-              <div>
-                <p className="text-white text-2xl font-light tracking-tight">{stat.value}</p>
-                <p className="text-white/40 text-xs mt-0.5 font-light">{stat.label}</p>
-              </div>
-            </div>
-          ))}
         </div>
       </div>
     </section>

@@ -4,7 +4,7 @@ import nodemailer from 'nodemailer';
 export async function POST(request) {
   try {
     const body = await request.json();
-    const { name, email, phone, service, message } = body;
+    const { name, email, phone, service, message, pageName } = body;
 
     const fieldErrors = {};
 
@@ -43,7 +43,7 @@ export async function POST(request) {
     const mailOptions = {
       from: process.env.EMAIL_USER,
       to: 'bytespire1@gmail.com', // Sending directly to your email!
-      subject: `New ByteSpire Inquiry from ${name} - ${service}`,
+      subject: `New ByteSpire Inquiry from ${name} - ${service}${pageName ? ` (${pageName})` : ''}`,
       text: `
         New Contact Form Submission:
         
@@ -51,7 +51,7 @@ export async function POST(request) {
         Email: ${email}
         Phone: ${phone}
         Service Requested: ${service}
-        
+        ${pageName ? `Page / Source: ${pageName}\n` : ''}
         Message:
         ${message || 'No message provided.'}
       `,
@@ -75,6 +75,12 @@ export async function POST(request) {
               <td style="padding: 10px; border-bottom: 1px solid #eee;"><strong>Service:</strong></td>
               <td style="padding: 10px; border-bottom: 1px solid #eee;">${service}</td>
             </tr>
+            ${pageName ? `
+            <tr>
+              <td style="padding: 10px; border-bottom: 1px solid #eee;"><strong>Page / Source:</strong></td>
+              <td style="padding: 10px; border-bottom: 1px solid #eee;">${pageName}</td>
+            </tr>
+            ` : ''}
           </table>
           <h3 style="margin-top: 30px;">Message:</h3>
           <p style="background: #f9f9f9; padding: 15px; border-radius: 8px;">

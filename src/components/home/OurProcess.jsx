@@ -73,15 +73,15 @@ function OurProcess() {
           </div>
 
           {/* Right Column (Stacked Sticky Cards) */}
-          <div className="w-full lg:w-[52%] flex flex-col gap-4 md:gap-5">
+          <div className="w-full lg:w-[52%] flex flex-col gap-4 md:gap-5 [--stack-base:80px] [--stack-offset:14px] lg:[--stack-base:130px] lg:[--stack-offset:20px]">
             {steps.map((step, i) => {
               const Icon = step.icon;
               return (
                 <div
                   key={i}
-                  className="lg:sticky bg-white p-5 md:p-7 rounded-2xl md:rounded-3xl border border-gray-100 shadow-[0_8px_30px_rgba(0,0,0,0.04)] hover:shadow-[0_20px_40px_rgba(142,33,87,0.08)] hover:border-[#8e2157]/40 flex flex-col items-start transition-all duration-500 hover:-translate-y-1 group"
+                  className="sticky bg-white p-5 md:p-7 rounded-2xl md:rounded-3xl border border-gray-100 shadow-[0_8px_30px_rgba(0,0,0,0.04)] hover:shadow-[0_20px_40px_rgba(142,33,87,0.08)] hover:border-[#8e2157]/40 flex flex-col items-start transition-all duration-500 hover:-translate-y-1 group"
                   style={{
-                    top: `calc(130px + ${i * 20}px)`,
+                    top: `calc(var(--stack-base) + ${i} * var(--stack-offset))`,
                     zIndex: i + 1,
                   }}
                 >

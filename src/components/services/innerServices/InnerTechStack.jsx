@@ -1,6 +1,7 @@
 "use client";
 
 import React from "react";
+import Image from "next/image";
 import { resolveIcon } from "./iconHelper";
 
 export default function InnerTechStack({ techStack }) {
@@ -89,9 +90,24 @@ export default function InnerTechStack({ techStack }) {
 
   return (
     <section className="py-20 md:py-28 bg-[#080808] text-white border-t border-white/[0.06] relative overflow-hidden">
-      {/* Background decorations */}
-      <div className="absolute top-1/3 right-0 w-[400px] h-[400px] bg-[#8e2157]/10 rounded-full blur-[130px] pointer-events-none" />
-      <div className="absolute bottom-0 left-1/4 w-64 h-64 bg-violet-900/10 rounded-full blur-[90px] pointer-events-none" />
+      {/* Background Image & Atmospheric Overlays */}
+      <div className="absolute inset-0 w-full h-full pointer-events-none overflow-hidden">
+        <Image
+          src="/bg_images/bg_black_and_glod.jpeg"
+          alt="Technology Stack Background"
+          fill
+          sizes="100vw"
+          className="object-cover object-center"
+        />
+        {/* Layered overlays for depth and crystal-clear text contrast */}
+        <div className="absolute inset-0 bg-black/50 " />
+        <div className="absolute inset-0 bg-gradient-to-b from-[#080808] via-transparent to-[#080808] opacity-90" />
+        {/* <div className="absolute inset-0 bg-gradient-to-r from-black/90 via-black/60 to-black/85" /> */}
+      </div>
+
+      {/* Subtle ambient glows */}
+      <div className="absolute top-1/3 right-0 w-[400px] h-[400px] bg-amber-500/10 rounded-full blur-[140px] pointer-events-none" />
+      <div className="absolute bottom-0 left-1/4 w-64 h-64 bg-[#8e2157]/15 rounded-full blur-[100px] pointer-events-none" />
 
       <div className="max-w-7xl mx-auto px-6 sm:px-10 lg:px-16 relative z-10">
         {/* ── Split layout: Left 40% typography | Right 60% stack ── */}
@@ -126,7 +142,7 @@ export default function InnerTechStack({ techStack }) {
                   return (
                     <div
                       key={idx}
-                      className={`flex items-center gap-3 px-4 py-3 rounded-xl border ${accents[idx % accents.length]} ${accentBgs[idx % accentBgs.length]} bg-opacity-50`}
+                      className={`flex items-center gap-3 px-4 py-3 rounded-xl border backdrop-blur-sm ${accents[idx % accents.length]} ${accentBgs[idx % accentBgs.length]} bg-opacity-50`}
                     >
                       <div className={`w-7 h-7 rounded-lg flex items-center justify-center shrink-0 ${accentIcons[idx % accentIcons.length]}`}>
                         <Icon className="w-3.5 h-3.5" />
@@ -174,7 +190,7 @@ export default function InnerTechStack({ techStack }) {
                           {item.tech?.map((t, tIdx) => (
                             <span
                               key={tIdx}
-                              className="px-3 py-1.5 rounded-lg bg-white/[0.04] border border-white/[0.08] hover:border-white/20 text-white/65 hover:text-white/90 text-xs font-light transition-all duration-200"
+                              className="px-3 py-1.5 rounded-lg bg-black/40 backdrop-blur-sm border border-white/[0.09] hover:border-white/25 text-white/75 hover:text-white text-xs font-light transition-all duration-200"
                             >
                               {t}
                             </span>

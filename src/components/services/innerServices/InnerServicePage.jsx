@@ -6,6 +6,7 @@ import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import OutClientsSay from "@/components/home/OutClientsSay";
 import InnerHero from "./InnerHero";
+import InnerStats from "./InnerStats";
 import InnerExpertise from "./InnerExpertise";
 import InnerServicesList from "./InnerServicesList";
 import InnerTechStack from "./InnerTechStack";
@@ -51,6 +52,9 @@ export default function InnerServicePage({ service }) {
           slug={service.slug}
         />
 
+        {/* Section: Key Achievements & Stats */}
+        <InnerStats stats={service.stats} />
+
         {/* Section 3: Core Technical Competencies / Expertise */}
         <InnerExpertise solutions={service.solutions} />
 
@@ -68,7 +72,7 @@ export default function InnerServicePage({ service }) {
         <InnerProcess process={service.process} />
 
         {/* Section 8: Call to Action (Web Development Consultation) */}
-        <InnerCTA cta={service.cta} />
+        <InnerCTA cta={service.cta} serviceName={service.title || service.slug} />
 
         {/* Testimonials from Clients */}
         <OutClientsSay />
