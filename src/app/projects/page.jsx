@@ -265,8 +265,8 @@ function Page() {
                     <img
                       src={project.image}
                       alt={project.title}
-                      // fill
-                      className="object-cover transition-transform duration-500"
+                    // fill
+                    // className="object-cover transition-transform duration-500"
                     />
 
                     {/* Overlay */}
